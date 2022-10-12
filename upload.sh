@@ -1,4 +1,4 @@
-gitbook build ./ docs   //发布书籍
+gitbook build ./ docs
 git add . 
 git commit -m "update"
 git push -u origin master
