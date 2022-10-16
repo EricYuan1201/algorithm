@@ -235,7 +235,154 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="day04-24-&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#xFF0C;19&#x5220;&#x9664;&#x94FE;&#x8868;&#x7684;&#x5012;&#x6570;&#x7B2C;n&#x4E2A;&#x8282;&#x70B9;&#xFF0C;-&#x94FE;&#x8868;&#x76F8;&#x4EA4;&#xFF0C;142&#x73AF;&#x5F62;&#x94FE;&#x8868;ii">day04 24. &#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#xFF0C;19.&#x5220;&#x9664;&#x94FE;&#x8868;&#x7684;&#x5012;&#x6570;&#x7B2C;N&#x4E2A;&#x8282;&#x70B9;&#xFF0C; &#x94FE;&#x8868;&#x76F8;&#x4EA4;&#xFF0C;142.&#x73AF;&#x5F62;&#x94FE;&#x8868;II</h1>
+                                <h1 id="24-&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#xFF0C;19&#x5220;&#x9664;&#x94FE;&#x8868;&#x7684;&#x5012;&#x6570;&#x7B2C;n&#x4E2A;&#x8282;&#x70B9;&#xFF0C;-&#x94FE;&#x8868;&#x76F8;&#x4EA4;&#xFF0C;142&#x73AF;&#x5F62;&#x94FE;&#x8868;ii">24. &#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#xFF0C;19.&#x5220;&#x9664;&#x94FE;&#x8868;&#x7684;&#x5012;&#x6570;&#x7B2C;N&#x4E2A;&#x8282;&#x70B9;&#xFF0C; &#x94FE;&#x8868;&#x76F8;&#x4EA4;&#xFF0C;142.&#x73AF;&#x5F62;&#x94FE;&#x8868;II</h1>
+<h2 id="24-&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;">24. &#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;</h2>
+<p>&#x5173;&#x952E;&#x662F;&#x9700;&#x8981;&#x64CD;&#x4F5C;4&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x4E4B;&#x524D;&#x60F3;&#x7684;&#x662F;3&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x4E00;&#x76F4;&#x5199;&#x4E0D;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x672C;&#x8D28;&#x8FD8;&#x662F; pre, cur&#x7684;&#x53D8;&#x79CD;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> ListNode <span class="hljs-title">swapPairs</span><span class="hljs-params">(ListNode head)</span> </span>{
+    <span class="hljs-keyword">if</span> (head == <span class="hljs-keyword">null</span> || head.next == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> head;
+    }
+    ListNode preHead = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);
+    preHead.next = head;
+    ListNode pre = preHead;
+    ListNode cur = head;
+    ListNode next = <span class="hljs-keyword">null</span>;
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (cur.next != <span class="hljs-keyword">null</span>) {
+        i++;
+        next = cur.next;
+        ListNode nextNext = cur.next.next;
+        <span class="hljs-keyword">if</span> (i % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>) { <span class="hljs-comment">//2&#x600E;&#x4E48;&#x4E22;&#x4E86;&#xFF1F;&#xFF1F;&#xFF1F;</span>
+            next.next = cur;
+            pre.next = next;
+            cur.next = nextNext;
+        } <span class="hljs-keyword">else</span> {
+            pre = cur;
+            cur = next;
+        }
+    }
+    <span class="hljs-keyword">return</span> preHead.next;
+}
+</code></pre>
+<h2 id="19&#x5220;&#x9664;&#x94FE;&#x8868;&#x7684;&#x5012;&#x6570;&#x7B2C;n&#x4E2A;&#x8282;&#x70B9;">19.&#x5220;&#x9664;&#x94FE;&#x8868;&#x7684;&#x5012;&#x6570;&#x7B2C;N&#x4E2A;&#x8282;&#x70B9;</h2>
+<p>&#x8FD9;&#x4E2A;&#x9898;&#x7EDD;&#x5BF9;&#x505A;&#x8FC7;&#xFF0C;&#x5173;&#x952E;&#x662F;&#x627E;&#x5230;&#x5012;&#x6570;&#x7B2C;n&#x4E2A;&#x8282;&#x70B9;&#x3002;</p>
+<pre><code class="lang-java">
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> ListNode <span class="hljs-title">removeNthFromEnd</span><span class="hljs-params">(ListNode head, <span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">if</span> (head == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    }
+    <span class="hljs-keyword">if</span> (head.next == <span class="hljs-keyword">null</span> &amp;&amp; n == <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    }
+    ListNode preHead = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);
+    preHead.next = head;
+    ListNode nHead = preHead;  <span class="hljs-comment">//------&gt; &#x8FD9;&#x4E00;&#x884C;&#x624D;&#x662F;&#x6CE8;&#x610F;&#x70B9;</span>
+    ListNode cur = preHead;    <span class="hljs-comment">//------&gt; &#x8FD9;&#x4E00;&#x884C;&#x624D;&#x662F;&#x6CE8;&#x610F;&#x70B9;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+        <span class="hljs-keyword">if</span> (nHead == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> preHead.next;
+        }
+        nHead = nHead.next;
+    }
+    <span class="hljs-keyword">while</span> (nHead != <span class="hljs-keyword">null</span> &amp;&amp; nHead.next != <span class="hljs-keyword">null</span>) {
+        nHead = nHead.next;
+        cur = cur.next;
+    }
+    <span class="hljs-comment">//&#x627E;&#x5230;cur&#x5C31;&#x662F;&#x5012;&#x6570;&#x7B2C;n-1&#x4E2A;&#x8282;&#x70B9;&#x3002;</span>
+    <span class="hljs-comment">//&#x3010;0&#x3011;&#xFF0C;1&#xFF0C;2&#xFF0C;3&#xFF0C;4&#xFF0C;5</span>
+    <span class="hljs-comment">//&#x3010;0&#x3011;&#xFF0C;1</span>
+    <span class="hljs-comment">//&#x3010;0&#x3011;&#xFF0C;1&#xFF0C;2 ---&#x300B; 2</span>
+    <span class="hljs-comment">//&#x8282;&#x70B9;&#x8C8C;&#x4F3C;&#x6709;&#x70B9;&#x95EE;&#x9898;&#x3002;</span>
+    <span class="hljs-keyword">if</span> (cur != <span class="hljs-keyword">null</span> &amp;&amp; cur.next != <span class="hljs-keyword">null</span>) {
+        cur.next = cur.next.next;
+    }
+    <span class="hljs-keyword">return</span> preHead.next;
+}
+</code></pre>
+<h2 id="&#x94FE;&#x8868;&#x76F8;&#x4EA4;">&#x94FE;&#x8868;&#x76F8;&#x4EA4;</h2>
+<p>&#x8BB0;&#x5F97;&#x601D;&#x8DEF;&#xFF0C;&#x8FD8;&#x662F;&#x6CA1;&#x5199;&#x51FA;&#x6765;&#x3002;&#x6700;&#x540E;&#x7684;&#x7EC8;&#x6B62;&#x6761;&#x4EF6;&#x662F;&#x4E24;&#x4E2A;&#x90FD;&#x4E3A;null&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> ListNode <span class="hljs-title">getIntersectionNode</span><span class="hljs-params">(ListNode headA, ListNode headB)</span> </span>{
+    <span class="hljs-keyword">if</span> (headA == <span class="hljs-keyword">null</span> || headB == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    }
+    <span class="hljs-keyword">if</span> (headA.next == <span class="hljs-keyword">null</span> &amp;&amp; headB.next == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">if</span> (headA == headB) <span class="hljs-keyword">return</span> headA;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    }
+    <span class="hljs-comment">//&#x9898;&#x76EE;&#x6570;&#x636E; &#x4FDD;&#x8BC1; &#x6574;&#x4E2A;&#x94FE;&#x5F0F;&#x7ED3;&#x6784;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x73AF;&#x3002;</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">//&#x6CE8;&#x610F;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x540E;&#xFF0C;&#x94FE;&#x8868;&#x5FC5;&#x987B; &#x4FDD;&#x6301;&#x5176;&#x539F;&#x59CB;&#x7ED3;&#x6784; &#x3002;</span>
+    <span class="hljs-comment">//&#x4F60;&#x80FD;&#x5426;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(m + n) &#x3001;&#x4EC5;&#x7528; O(1) &#x5185;&#x5B58;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1F;</span>
+
+    <span class="hljs-comment">//1,2,3,4,5</span>
+    <span class="hljs-comment">//2,4,5</span>
+    <span class="hljs-comment">//&#x5B8C;&#x5168;&#x6CA1;&#x601D;&#x8DEF;&#x554A;</span>
+    ListNode curA = headA;
+    ListNode curB = headB;
+<span class="hljs-comment">//        while (true) {</span>
+<span class="hljs-comment">//            if (curA == curB) {</span>
+<span class="hljs-comment">//                return curA;</span>
+<span class="hljs-comment">//            }</span>
+<span class="hljs-comment">//            if (curA.next == null) {</span>
+<span class="hljs-comment">//                curA.next = headB;</span>
+<span class="hljs-comment">//            } else {</span>
+<span class="hljs-comment">//                curA = curA.next;</span>
+<span class="hljs-comment">//            }</span>
+<span class="hljs-comment">//            if (curB.next == null) {</span>
+<span class="hljs-comment">//                curB.next = headA;</span>
+<span class="hljs-comment">//            } else {</span>
+<span class="hljs-comment">//                curB = curB.next;</span>
+<span class="hljs-comment">//            }</span>
+<span class="hljs-comment">//        }</span>
+    <span class="hljs-keyword">while</span> (curA != curB) {
+        <span class="hljs-keyword">if</span> (curA == <span class="hljs-keyword">null</span>) { <span class="hljs-comment">//----&gt; &#x5FC5;&#x987B;&#x7528;&#x8FD9;&#x4E2A;&#xFF0C;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x8282;&#x70B9;&#x7684;&#x7ED3;&#x6784;&#x3002;</span>
+            curA = headB;   <span class="hljs-comment">//4,1,6 &#x548C; 5&#xFF0C;1 &#x4E0D;&#x7B97;&#x4EA4;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4EA4;&#x70B9;&#xFF0C;&#x6700;&#x540E;&#x4F1A;&#x5361;&#x5230;null&#xFF0C;null&#x76F4;&#x63A5;return&#x4E86;&#x3002;</span>
+        } <span class="hljs-keyword">else</span> {            <span class="hljs-comment">//&#x8FD9;&#x4E00;&#x4E2A;&#x5199;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6B7B;&#x6D3B;&#x6CA1;&#x60F3;&#x8D77;&#x6765;&#x3002;</span>
+            curA = curA.next;
+        }
+        <span class="hljs-keyword">if</span> (curB == <span class="hljs-keyword">null</span>) {
+            curB = headA;
+        } <span class="hljs-keyword">else</span> {
+            curB = curB.next;
+        }
+    }
+    <span class="hljs-keyword">return</span> curA;
+}
+</code></pre>
+<h2 id="142&#x73AF;&#x5F62;&#x94FE;&#x8868;ii">142.&#x73AF;&#x5F62;&#x94FE;&#x8868;II</h2>
+<p>&#x6700;&#x540E;&#x8FD0;&#x7528;&#x5230;&#x4E86;&#x6570;&#x5B66;&#x77E5;&#x8BC6;&#xFF0C;&#x597D;&#x5427;&#xFF0C;&#x6211;&#x505A;&#x8FC7;&#xFF0C;&#x8FD8;&#x662F;&#x6CA1;&#x5199;&#x51FA;&#x6765;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * &#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5934;&#x8282;&#x70B9;  head &#xFF0C;&#x8FD4;&#x56DE;&#x94FE;&#x8868;&#x5F00;&#x59CB;&#x5165;&#x73AF;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002; &#x5982;&#x679C;&#x94FE;&#x8868;&#x65E0;&#x73AF;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; null&#x3002;
+ *
+ * &#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539; &#x94FE;&#x8868;&#x3002;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">detectCycle</span><span class="hljs-params">(ListNode head)</span> </span>{
+    <span class="hljs-keyword">if</span> (head == <span class="hljs-keyword">null</span> || head.next == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    }
+    <span class="hljs-comment">//&#x5FEB;&#x6162;&#x6307;&#x9488;&#xFF1F;&#xFF1F;</span>
+<span class="hljs-comment">//        ListNode preHead = new ListNode(0);</span>
+<span class="hljs-comment">//        preHead.next = head;</span>
+    <span class="hljs-comment">// 3,2,0,-4, [2]</span>
+    <span class="hljs-comment">// 1, 2 [1]</span>
+    ListNode slow = head;
+    ListNode fast = head;
+    <span class="hljs-keyword">while</span> (fast != <span class="hljs-keyword">null</span> &amp;&amp; fast.next != <span class="hljs-keyword">null</span>) {
+        slow = slow.next;
+        fast = fast.next.next;
+        <span class="hljs-keyword">if</span> (slow == fast) {
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+    fast = head;
+    <span class="hljs-keyword">while</span> (slow != fast) {
+        slow = slow.next;
+        fast = fast.next;
+    }
+    <span class="hljs-keyword">return</span> fast;
+}
+</code></pre>
 
                                 
                                 </section>
@@ -275,7 +422,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day04 24. 两两交换链表中的节点，19.删除链表的倒数第N个节点， 链表相交，142.环形链表II ","level":"1.3.2","depth":2,"previous":{"title":"day03 203.移除链表元素，206.反转链表 ","level":"1.3.1","depth":2,"path":"chapter2/section2.1.md","ref":"chapter2/section2.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section2.2.md","mtime":"2022-10-16T03:14:33.596Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-16T03:18:45.836Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day04 24. 两两交换链表中的节点，19.删除链表的倒数第N个节点， 链表相交，142.环形链表II ","level":"1.3.2","depth":2,"previous":{"title":"day03 203.移除链表元素，206.反转链表 ","level":"1.3.1","depth":2,"path":"chapter2/section2.1.md","ref":"chapter2/section2.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section2.2.md","mtime":"2022-10-16T07:39:28.344Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-16T07:39:35.251Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
