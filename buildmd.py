@@ -26,7 +26,7 @@ if __name__ == '__main__':
     last_line = get_last_line()
     file_name = last_line[last_line.index('](') + 2:last_line.index(')')]
     print(file_name)
-    content = last_line[last_line.index('[day') + 6: last_line.index('(chapter') - 2].strip()
+    content = last_line[last_line.index('[day') + 1: last_line.index('(chapter') - 2].strip()
     print(content)
     mkdir(file_name[0:file_name.index('/')])
     f = open(os.path.abspath(os.path.dirname(__file__)) + '/' + file_name, 'w')
