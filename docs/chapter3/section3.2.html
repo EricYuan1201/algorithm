@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和  · GitBook</title>
+        <title>day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="section3.2.html" />
     
-    
-    <link rel="prev" href="README.md" />
+    <link rel="prev" href="section3.1.html" />
     
 
     </head>
@@ -219,7 +217,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="section3.1.html">
+        <li class="chapter " data-level="1.4.1" data-path="section3.1.html">
             
                 <a href="section3.1.html">
             
@@ -232,7 +230,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="section3.2.html">
+        <li class="chapter active" data-level="1.4.2" data-path="section3.2.html">
             
                 <a href="section3.2.html">
             
@@ -280,7 +278,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 </a>
+        <a href=".." >day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和</a>
     </h1>
 </div>
 
@@ -295,85 +293,75 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="242&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;&#xFF0C;349-&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;&#xFF0C;-202-&#x5FEB;&#x4E50;&#x6570;&#xFF0C;1-&#x4E24;&#x6570;&#x4E4B;&#x548C;">242.&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;&#xFF0C;349. &#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;&#xFF0C; 202. &#x5FEB;&#x4E50;&#x6570;&#xFF0C;1. &#x4E24;&#x6570;&#x4E4B;&#x548C;</h1>
-<h2 id="242&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;">242.&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;</h2>
-<p>&#x4E4B;&#x524D;&#x5199;&#x8FC7;&#x8FD9;&#x4E2A;&#x9898;&#xFF1F;</p>
+                                <h1 id="day07-454&#x56DB;&#x6570;&#x76F8;&#x52A0;ii&#xFF0C;383-&#x8D4E;&#x91D1;&#x4FE1;&#xFF0C;-15-&#x4E09;&#x6570;&#x4E4B;&#x548C;&#xFF0C;18-&#x56DB;&#x6570;&#x4E4B;">day07 454.&#x56DB;&#x6570;&#x76F8;&#x52A0;II&#xFF0C;383. &#x8D4E;&#x91D1;&#x4FE1;&#xFF0C; 15. &#x4E09;&#x6570;&#x4E4B;&#x548C;&#xFF0C;18. &#x56DB;&#x6570;&#x4E4B;</h1>
+<h2 id="day07-454&#x56DB;&#x6570;&#x76F8;&#x52A0;ii">day07 454.&#x56DB;&#x6570;&#x76F8;&#x52A0;II</h2>
+<p>&#x56DB;&#x6570;&#x4E00;&#x5206;&#x4E3A;&#x4E8C;&#xFF1F;</p>
 <pre><code class="lang-java">
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isAnagram</span><span class="hljs-params">(String s, String t)</span> </span>{
-  Map&lt;Character, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
-  <span class="hljs-keyword">char</span>[] charsS = s.toCharArray();
-  <span class="hljs-keyword">char</span>[] charsT = t.toCharArray();
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> s1 : charsS) {
-     <span class="hljs-keyword">if</span> (map.containsKey(s1)) {
-        map.put(s1, map.get((Character) s1) + <span class="hljs-number">1</span>);
-     } <span class="hljs-keyword">else</span> {
-        map.put(s1, <span class="hljs-number">1</span>);
-     }
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">fourSumCount</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums1, <span class="hljs-keyword">int</span>[] nums2, <span class="hljs-keyword">int</span>[] nums3, <span class="hljs-keyword">int</span>[] nums4)</span> </span>{
+    Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums1) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j : nums2) {
+            map.put(i + j, map.getOrDefault(i + j, <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);
+        }
+    }
+    <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j : nums3) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k : nums4) {
+            <span class="hljs-keyword">if</span> (map.containsKey(-(j + k))) {
+                res += map.get(-(j + k));
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> res;
+}
+</code></pre>
+<h2 id="383-&#x8D4E;&#x91D1;&#x4FE1;">383. &#x8D4E;&#x91D1;&#x4FE1;</h2>
+<p>&#x5B66;&#x4E60;&#x4E00;&#x4E0B;char&#x7528;&#x6CD5;</p>
+<pre><code class="lang-java">
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">canConstruct</span><span class="hljs-params">(String ransomNote, String magazine)</span> </span>{
+  <span class="hljs-keyword">if</span> (magazine.length() &lt; ransomNote.length()) {
+     <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
   }
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> t1 : charsT) {
-     <span class="hljs-keyword">if</span> (map.containsKey(t1)) {
-        map.put(t1, map.get(t1) -<span class="hljs-number">1</span>);
-     } <span class="hljs-keyword">else</span> {
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-     }
+  <span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">26</span>];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> c1: magazine.toCharArray()) {
+     arr[c1 - <span class="hljs-string">&apos;a&apos;</span>] ++;
   }
-  <span class="hljs-keyword">for</span> (Character character : map.keySet()) {
-     Integer integer = map.get(character);
-     <span class="hljs-keyword">if</span> (integer != <span class="hljs-number">0</span>) {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> c2: ransomNote.toCharArray()) {
+     arr[c2 - <span class="hljs-string">&apos;a&apos;</span>] --;
+     <span class="hljs-keyword">if</span> (arr[c2 - <span class="hljs-string">&apos;a&apos;</span>] &lt; <span class="hljs-number">0</span>) {
         <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
      }
   }
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
 }
 </code></pre>
-<h2 id="349-&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;">349. &#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;</h2>
-<p>&#x8FD9;&#x4E2A;&#x9898;&#x4E0D;&#x5199;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x7528;set&#x5C31;&#x884C;&#x3002;</p>
+<h2 id="15-&#x4E09;&#x6570;&#x4E4B;&#x548C;">15. &#x4E09;&#x6570;&#x4E4B;&#x548C;</h2>
+<p>&#x7528;map&#x786E;&#x5B9E;&#x80FD;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x6548;&#x7387;&#x975E;&#x5E38;&#x4E4B;&#x4F4E;</p>
 <pre><code class="lang-java">
-Set&lt;Integer&gt; set = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();
-
-HashMap&lt;Character, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
-</code></pre>
-<h2 id="202-&#x5FEB;&#x4E50;&#x6570;">202. &#x5FEB;&#x4E50;&#x6570;</h2>
-<p>&#x6709;&#x5FAA;&#x73AF;&#x7684;&#x60C5;&#x51B5;&#x5012;&#x662F;&#x6CA1;&#x6709;&#x60F3;&#x51FA;&#x6765;</p>
-<pre><code class="lang-java">
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isHappy</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
-  Set&lt;Integer&gt; set = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();
-
-  <span class="hljs-keyword">while</span> (n != <span class="hljs-number">1</span> &amp;&amp; !set.contains(n)) {
-     set.add(n);
-     n = getNext(n);
-  }
-  <span class="hljs-keyword">return</span> n == <span class="hljs-number">1</span>;
-}
-
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getNext</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
-  <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">int</span> d = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
-     d = (n % <span class="hljs-number">10</span>);
-     n = n / <span class="hljs-number">10</span>;
-     sum += d * d;
-  }
-  <span class="hljs-keyword">return</span> sum;
-}
-</code></pre>
-<h2 id="1-&#x4E24;&#x6570;&#x4E4B;&#x548C;">1. &#x4E24;&#x6570;&#x4E4B;&#x548C;</h2>
-<p>&#x5165;&#x95E8;&#x9898;&#xFF0C;&#x6CA1;&#x4EC0;&#x4E48;&#x597D;&#x8BF4;&#x7684;&#x3002;</p>
-<pre><code class="lang-java">
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] twoSum(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target) {
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="hljs-keyword">int</span>[] nums) {
     <span class="hljs-keyword">if</span> (nums == <span class="hljs-keyword">null</span> || nums.length == <span class="hljs-number">0</span>) {
         <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
     }
-    HashMap&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+    Arrays.sort(nums);
+    Set&lt;List&lt;Integer&gt;&gt; lists = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) {
-        <span class="hljs-keyword">if</span> (map.containsKey(target - nums[i])) {
-            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{i, map.get(target -nums[i])};
-        } <span class="hljs-keyword">else</span> {
-            map.put(nums[i], i);
+        <span class="hljs-keyword">if</span> (i &gt;= <span class="hljs-number">1</span> &amp;&amp; nums[i] == nums[i - <span class="hljs-number">1</span>]) <span class="hljs-keyword">continue</span>;
+        Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; nums.length; j++) {
+            <span class="hljs-keyword">if</span> (map.containsKey(-nums[i] - nums[j])) {
+                List&lt;Integer&gt; list = Arrays.asList(nums[i], nums[j], -nums[i] - nums[j]);
+                lists.add(list);
+            } <span class="hljs-keyword">else</span> {
+                map.put(nums[j], j);
+            }
         }
     }
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(lists);
 }
+</code></pre>
+<h2 id="18-&#x56DB;&#x6570;&#x4E4B;&#x548C;">18. &#x56DB;&#x6570;&#x4E4B;&#x548C;</h2>
+<pre><code class="lang-java">
+
 </code></pre>
 
                                 
@@ -402,14 +390,10 @@ HashMap&lt;Character, Integer&gt; map = <span class="hljs-keyword">new</span> Ha
 
             
                 
-                <a href="README.md" class="navigation navigation-prev " aria-label="Previous page: 哈希表">
+                <a href="section3.1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="section3.2.html" class="navigation navigation-next " aria-label="Next page: day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -418,7 +402,7 @@ HashMap&lt;Character, Integer&gt; map = <span class="hljs-keyword">new</span> Ha
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ","level":"1.4.1","depth":2,"next":{"title":"day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和","level":"1.4.2","depth":2,"path":"chapter3/section3.2.md","ref":"chapter3/section3.2.md","articles":[]},"previous":{"title":"哈希表","level":"1.4","depth":1,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[{"title":"day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ","level":"1.4.1","depth":2,"path":"chapter3/section3.1.md","ref":"chapter3/section3.1.md","articles":[]},{"title":"day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和","level":"1.4.2","depth":2,"path":"chapter3/section3.2.md","ref":"chapter3/section3.2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section3.1.md","mtime":"2022-10-17T15:00:25.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T15:52:52.473Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和","level":"1.4.2","depth":2,"previous":{"title":"day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ","level":"1.4.1","depth":2,"path":"chapter3/section3.1.md","ref":"chapter3/section3.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section3.2.md","mtime":"2022-10-18T15:52:44.750Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T15:52:52.473Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

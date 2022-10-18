@@ -10,3 +10,4 @@
     * [day04 24. 两两交换链表中的节点，19.删除链表的倒数第N个节点， 链表相交，142.环形链表II ](chapter2/section2.2.md)
 * [哈希表](chapter3/README.md)
     * [day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ](chapter3/section3.1.md)
+    * [day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和](chapter3/section3.2.md)
