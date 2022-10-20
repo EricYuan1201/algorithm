@@ -19,16 +19,19 @@ def get_last_line():
         if len(str(line).strip()) > 3:
             lastLine = line
     print(lastLine)
-    return lastLine
+    return lastLine.strip().replace('\n','')
 
 
 if __name__ == '__main__':
     last_line = get_last_line()
-    file_name = last_line[last_line.index('](') + 2:last_line.index(')')]
+    file_name = last_line[last_line.index('](') + 2:last_line.rfind(')')]
     print(file_name)
     content = last_line[last_line.index('[day') + 1: last_line.index('(chapter') - 2].strip()
     print(content)
-    mkdir(file_name[0:file_name.index('/')])
+    try:
+        mkdir(file_name[0:file_name.index('/')])
+    except Exception as e:
+        print('error')
     f = open(os.path.abspath(os.path.dirname(__file__)) + '/' + file_name, 'w')
     f.write('#' + content + '\n\n')
     items = content.split('，')
