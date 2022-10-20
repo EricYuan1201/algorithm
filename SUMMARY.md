@@ -11,3 +11,6 @@
 * [哈希表](chapter3/README.md)
     * [day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ](chapter3/section3.1.md)
     * [day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和](chapter3/section3.2.md)
+* [字符串](chapter4/README.md)
+    * [day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 ](chapter4/section4.1.md)
+
