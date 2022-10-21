@@ -70,10 +70,51 @@
 ```
 ##151.翻转字符串里的单词
 
+while循环和for循环的区别：
+
+首先，两者从表达能力上说是等价的，即两者能够完成的事情是一样的。其次，由于for语句将初始化，循环条件和每次循环后对循环变量的修改放在一起，比较清晰直观。因此for语句常用于能够预先判断循环次数的循环或遍历中。如遍历一个数组，或者执行某操作若干次之类。此时用for语句较优。
+
+while语句的历史更久，表达方式上更自由灵活，常用于无法事先判断循环次数的循环。譬如经典的计算C风格字符串的长度的代码，又如后根遍历二叉树的非递归实现。此时用while语句会使程序更清晰。最后强调，两者从表达能力上说是等价的。
+
 
 
 ```java
-
+public static String reverseWords(String s) {
+    int left = 0;
+    int right = s.length() - 1;
+    //首先去除了两边的空格
+    for (int i = left; i <= right; i++) {
+        if (s.charAt(i) == ' ') {
+            left++;
+        } else {
+            break;
+        }
+    }
+    for (int i = right; i >= left; i--) {
+        if (s.charAt(i) == ' ') {
+            right--;
+        } else {
+            break;
+        }
+    }
+    StringBuilder stringBuilder = new StringBuilder();
+    while (right >= left) {
+        int index = right;
+        while (right >= 0 && s.charAt(right) != ' ') {
+            right--;
+        }
+        for (int i = right + 1; i <= index; i++) {
+            stringBuilder.append(s.charAt(i));
+        }
+        if (right > left) {
+            stringBuilder.append(" ");
+        }
+        while (right >= 0 && s.charAt(right) == ' ') {
+            right --;
+        }
+    }
+    return stringBuilder.toString();
+}
 
 ```
 ##剑指Offer58-II.左旋转字符串

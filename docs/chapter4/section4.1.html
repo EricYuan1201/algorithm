@@ -397,8 +397,45 @@
     }
 </code></pre>
 <h2 id="151&#x7FFB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x5355;&#x8BCD;">151.&#x7FFB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x5355;&#x8BCD;</h2>
-<pre><code class="lang-java">
-
+<p>while&#x5FAA;&#x73AF;&#x548C;for&#x5FAA;&#x73AF;&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x4E24;&#x8005;&#x4ECE;&#x8868;&#x8FBE;&#x80FD;&#x529B;&#x4E0A;&#x8BF4;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF0C;&#x5373;&#x4E24;&#x8005;&#x80FD;&#x591F;&#x5B8C;&#x6210;&#x7684;&#x4E8B;&#x60C5;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x5176;&#x6B21;&#xFF0C;&#x7531;&#x4E8E;for&#x8BED;&#x53E5;&#x5C06;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5FAA;&#x73AF;&#x6761;&#x4EF6;&#x548C;&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x540E;&#x5BF9;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x7684;&#x4FEE;&#x6539;&#x653E;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x6BD4;&#x8F83;&#x6E05;&#x6670;&#x76F4;&#x89C2;&#x3002;&#x56E0;&#x6B64;for&#x8BED;&#x53E5;&#x5E38;&#x7528;&#x4E8E;&#x80FD;&#x591F;&#x9884;&#x5148;&#x5224;&#x65AD;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x7684;&#x5FAA;&#x73AF;&#x6216;&#x904D;&#x5386;&#x4E2D;&#x3002;&#x5982;&#x904D;&#x5386;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6216;&#x8005;&#x6267;&#x884C;&#x67D0;&#x64CD;&#x4F5C;&#x82E5;&#x5E72;&#x6B21;&#x4E4B;&#x7C7B;&#x3002;&#x6B64;&#x65F6;&#x7528;for&#x8BED;&#x53E5;&#x8F83;&#x4F18;&#x3002;</p>
+<p>while&#x8BED;&#x53E5;&#x7684;&#x5386;&#x53F2;&#x66F4;&#x4E45;&#xFF0C;&#x8868;&#x8FBE;&#x65B9;&#x5F0F;&#x4E0A;&#x66F4;&#x81EA;&#x7531;&#x7075;&#x6D3B;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x65E0;&#x6CD5;&#x4E8B;&#x5148;&#x5224;&#x65AD;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x7684;&#x5FAA;&#x73AF;&#x3002;&#x8B6C;&#x5982;&#x7ECF;&#x5178;&#x7684;&#x8BA1;&#x7B97;C&#x98CE;&#x683C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x53C8;&#x5982;&#x540E;&#x6839;&#x904D;&#x5386;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x975E;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#x3002;&#x6B64;&#x65F6;&#x7528;while&#x8BED;&#x53E5;&#x4F1A;&#x4F7F;&#x7A0B;&#x5E8F;&#x66F4;&#x6E05;&#x6670;&#x3002;&#x6700;&#x540E;&#x5F3A;&#x8C03;&#xFF0C;&#x4E24;&#x8005;&#x4ECE;&#x8868;&#x8FBE;&#x80FD;&#x529B;&#x4E0A;&#x8BF4;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">reverseWords</span><span class="hljs-params">(String s)</span> </span>{
+    <span class="hljs-keyword">int</span> left = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> right = s.length() - <span class="hljs-number">1</span>;
+    <span class="hljs-comment">//&#x9996;&#x5148;&#x53BB;&#x9664;&#x4E86;&#x4E24;&#x8FB9;&#x7684;&#x7A7A;&#x683C;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = left; i &lt;= right; i++) {
+        <span class="hljs-keyword">if</span> (s.charAt(i) == <span class="hljs-string">&apos; &apos;</span>) {
+            left++;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = right; i &gt;= left; i--) {
+        <span class="hljs-keyword">if</span> (s.charAt(i) == <span class="hljs-string">&apos; &apos;</span>) {
+            right--;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+    StringBuilder stringBuilder = <span class="hljs-keyword">new</span> StringBuilder();
+    <span class="hljs-keyword">while</span> (right &gt;= left) {
+        <span class="hljs-keyword">int</span> index = right;
+        <span class="hljs-keyword">while</span> (right &gt;= <span class="hljs-number">0</span> &amp;&amp; s.charAt(right) != <span class="hljs-string">&apos; &apos;</span>) {
+            right--;
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = right + <span class="hljs-number">1</span>; i &lt;= index; i++) {
+            stringBuilder.append(s.charAt(i));
+        }
+        <span class="hljs-keyword">if</span> (right &gt; left) {
+            stringBuilder.append(<span class="hljs-string">&quot; &quot;</span>);
+        }
+        <span class="hljs-keyword">while</span> (right &gt;= <span class="hljs-number">0</span> &amp;&amp; s.charAt(right) == <span class="hljs-string">&apos; &apos;</span>) {
+            right --;
+        }
+    }
+    <span class="hljs-keyword">return</span> stringBuilder.toString();
+}
 </code></pre>
 <h2 id="&#x5251;&#x6307;offer58-ii&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;">&#x5251;&#x6307;Offer58-II.&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</h2>
 <pre><code class="lang-java">
@@ -447,7 +484,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 ","level":"1.5.1","depth":2,"next":{"title":"day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾","level":"1.5.2","depth":2,"path":"chapter4/section4.2.md","ref":"chapter4/section4.2.md","articles":[]},"previous":{"title":"字符串","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 ","level":"1.5.1","depth":2,"path":"chapter4/section4.1.md","ref":"chapter4/section4.1.md","articles":[]},{"title":"day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾","level":"1.5.2","depth":2,"path":"chapter4/section4.2.md","ref":"chapter4/section4.2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter4/section4.1.md","mtime":"2022-10-20T01:33:43.801Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-20T15:14:34.925Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 ","level":"1.5.1","depth":2,"next":{"title":"day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾","level":"1.5.2","depth":2,"path":"chapter4/section4.2.md","ref":"chapter4/section4.2.md","articles":[]},"previous":{"title":"字符串","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 ","level":"1.5.1","depth":2,"path":"chapter4/section4.1.md","ref":"chapter4/section4.1.md","articles":[]},{"title":"day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾","level":"1.5.2","depth":2,"path":"chapter4/section4.2.md","ref":"chapter4/section4.2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter4/section4.1.md","mtime":"2022-10-21T00:30:48.284Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-21T00:30:54.290Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
