@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和 · GitBook</title>
+        <title>day10 232.用栈实现队列，225. 用队列实现栈 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter4/" />
+    <link rel="next" href="section5.2.html" />
     
     
-    <link rel="prev" href="section3.1.html" />
+    <link rel="prev" href="README.md" />
     
 
     </head>
@@ -205,9 +205,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
             
-                <a href="./">
+                <a href="../chapter3/">
             
                     
                     哈希表
@@ -219,9 +219,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="section3.1.html">
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/section3.1.html">
             
-                <a href="section3.1.html">
+                <a href="../chapter3/section3.1.html">
             
                     
                     day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 
@@ -232,9 +232,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="section3.2.html">
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/section3.2.html">
             
-                <a href="section3.2.html">
+                <a href="../chapter3/section3.2.html">
             
                     
                     day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和
@@ -295,7 +295,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../chapter5/README.md">
+        <li class="chapter " data-level="1.6" data-path="README.md">
             
                 <span>
             
@@ -309,9 +309,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../chapter5/section5.1.html">
+        <li class="chapter active" data-level="1.6.1" data-path="section5.1.html">
             
-                <a href="../chapter5/section5.1.html">
+                <a href="section5.1.html">
             
                     
                     day10 232.用栈实现队列，225. 用队列实现栈
@@ -322,9 +322,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../chapter5/section5.2.html">
+        <li class="chapter " data-level="1.6.2" data-path="section5.2.html">
             
-                <a href="../chapter5/section5.2.html">
+                <a href="section5.2.html">
             
                     
                     day11 20. 有效的括号，1047. 删除字符串中的所有相邻重复项，150. 逆波兰表达式求值
@@ -370,7 +370,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和</a>
+        <a href=".." >day10 232.用栈实现队列，225. 用队列实现栈</a>
     </h1>
 </div>
 
@@ -385,73 +385,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="day07-454&#x56DB;&#x6570;&#x76F8;&#x52A0;ii&#xFF0C;383-&#x8D4E;&#x91D1;&#x4FE1;&#xFF0C;-15-&#x4E09;&#x6570;&#x4E4B;&#x548C;&#xFF0C;18-&#x56DB;&#x6570;&#x4E4B;">day07 454.&#x56DB;&#x6570;&#x76F8;&#x52A0;II&#xFF0C;383. &#x8D4E;&#x91D1;&#x4FE1;&#xFF0C; 15. &#x4E09;&#x6570;&#x4E4B;&#x548C;&#xFF0C;18. &#x56DB;&#x6570;&#x4E4B;</h1>
-<h2 id="day07-454&#x56DB;&#x6570;&#x76F8;&#x52A0;ii">day07 454.&#x56DB;&#x6570;&#x76F8;&#x52A0;II</h2>
-<p>&#x56DB;&#x6570;&#x4E00;&#x5206;&#x4E3A;&#x4E8C;&#xFF1F;</p>
+                                <h1 id="day10-232&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;&#xFF0C;225-&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;">day10 232.&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;&#xFF0C;225. &#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;</h1>
+<h2 id="232&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;">232.&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;</h2>
 <pre><code class="lang-java">
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">fourSumCount</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums1, <span class="hljs-keyword">int</span>[] nums2, <span class="hljs-keyword">int</span>[] nums3, <span class="hljs-keyword">int</span>[] nums4)</span> </span>{
-    Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums1) {
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j : nums2) {
-            map.put(i + j, map.getOrDefault(i + j, <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);
-        }
-    }
-    <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j : nums3) {
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k : nums4) {
-            <span class="hljs-keyword">if</span> (map.containsKey(-(j + k))) {
-                res += map.get(-(j + k));
-            }
-        }
-    }
-    <span class="hljs-keyword">return</span> res;
-}
+
 </code></pre>
-<h2 id="383-&#x8D4E;&#x91D1;&#x4FE1;">383. &#x8D4E;&#x91D1;&#x4FE1;</h2>
-<p>&#x5B66;&#x4E60;&#x4E00;&#x4E0B;char&#x7528;&#x6CD5;</p>
-<pre><code class="lang-java">
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">canConstruct</span><span class="hljs-params">(String ransomNote, String magazine)</span> </span>{
-  <span class="hljs-keyword">if</span> (magazine.length() &lt; ransomNote.length()) {
-     <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-  }
-  <span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">26</span>];
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> c1: magazine.toCharArray()) {
-     arr[c1 - <span class="hljs-string">&apos;a&apos;</span>] ++;
-  }
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> c2: ransomNote.toCharArray()) {
-     arr[c2 - <span class="hljs-string">&apos;a&apos;</span>] --;
-     <span class="hljs-keyword">if</span> (arr[c2 - <span class="hljs-string">&apos;a&apos;</span>] &lt; <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-     }
-  }
-  <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
-}
-</code></pre>
-<h2 id="15-&#x4E09;&#x6570;&#x4E4B;&#x548C;">15. &#x4E09;&#x6570;&#x4E4B;&#x548C;</h2>
-<p>&#x7528;map&#x786E;&#x5B9E;&#x80FD;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x6548;&#x7387;&#x975E;&#x5E38;&#x4E4B;&#x4F4E;</p>
-<pre><code class="lang-java">
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="hljs-keyword">int</span>[] nums) {
-    <span class="hljs-keyword">if</span> (nums == <span class="hljs-keyword">null</span> || nums.length == <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
-    }
-    Arrays.sort(nums);
-    Set&lt;List&lt;Integer&gt;&gt; lists = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) {
-        <span class="hljs-keyword">if</span> (i &gt;= <span class="hljs-number">1</span> &amp;&amp; nums[i] == nums[i - <span class="hljs-number">1</span>]) <span class="hljs-keyword">continue</span>;
-        Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; nums.length; j++) {
-            <span class="hljs-keyword">if</span> (map.containsKey(-nums[i] - nums[j])) {
-                List&lt;Integer&gt; list = Arrays.asList(nums[i], nums[j], -nums[i] - nums[j]);
-                lists.add(list);
-            } <span class="hljs-keyword">else</span> {
-                map.put(nums[j], j);
-            }
-        }
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(lists);
-}
-</code></pre>
-<h2 id="18-&#x56DB;&#x6570;&#x4E4B;&#x548C;">18. &#x56DB;&#x6570;&#x4E4B;&#x548C;</h2>
+<h2 id="225-&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;">225. &#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;</h2>
 <pre><code class="lang-java">
 
 </code></pre>
@@ -482,12 +421,12 @@
 
             
                 
-                <a href="section3.1.html" class="navigation navigation-prev " aria-label="Previous page: day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ">
+                <a href="README.md" class="navigation navigation-prev " aria-label="Previous page: 栈队列">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../chapter4/" class="navigation navigation-next " aria-label="Next page: 字符串">
+                <a href="section5.2.html" class="navigation navigation-next " aria-label="Next page: day11 20. 有效的括号，1047. 删除字符串中的所有相邻重复项，150. 逆波兰表达式求值">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -498,7 +437,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和","level":"1.4.2","depth":2,"next":{"title":"字符串","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 ","level":"1.5.1","depth":2,"path":"chapter4/section4.1.md","ref":"chapter4/section4.1.md","articles":[]},{"title":"day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾","level":"1.5.2","depth":2,"path":"chapter4/section4.2.md","ref":"chapter4/section4.2.md","articles":[]}]},"previous":{"title":"day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ","level":"1.4.1","depth":2,"path":"chapter3/section3.1.md","ref":"chapter3/section3.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section3.2.md","mtime":"2022-10-23T03:23:46.060Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-23T03:28:04.916Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day10 232.用栈实现队列，225. 用队列实现栈","level":"1.6.1","depth":2,"next":{"title":"day11 20. 有效的括号，1047. 删除字符串中的所有相邻重复项，150. 逆波兰表达式求值","level":"1.6.2","depth":2,"path":"chapter5/section5.2.md","ref":"chapter5/section5.2.md","articles":[]},"previous":{"title":"栈队列","level":"1.6","depth":1,"path":"chapter5/README.md","ref":"chapter5/README.md","articles":[{"title":"day10 232.用栈实现队列，225. 用队列实现栈","level":"1.6.1","depth":2,"path":"chapter5/section5.1.md","ref":"chapter5/section5.1.md","articles":[]},{"title":"day11 20. 有效的括号，1047. 删除字符串中的所有相邻重复项，150. 逆波兰表达式求值","level":"1.6.2","depth":2,"path":"chapter5/section5.2.md","ref":"chapter5/section5.2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/section5.1.md","mtime":"2022-10-23T03:26:55.689Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-23T03:28:04.916Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
