@@ -17,4 +17,5 @@
     * [day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾](chapter4/section4.2.md)
 * [栈队列](chapter5/README.md)
     * [day10 232.用栈实现队列，225. 用队列实现栈](chapter5/section5.1.md)
-    * [day11 20. 有效的括号，1047. 删除字符串中的所有相邻重复项，150. 逆波兰表达式求值](chapter5/section5.2.md)
+    * [day11 20. 有效的括号，1047. 删除字符串中的所有相邻重复项，150. 逆波兰表达式求值](chapter5/section5.2.md)   
+    * [day12 239. 滑动窗口最大值，347.前 K 个高频元素](chapter5/section5.3.md)
