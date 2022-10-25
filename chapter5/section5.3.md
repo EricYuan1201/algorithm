@@ -28,9 +28,11 @@ public static int[] maxSlidingWindow(int[] nums, int k) {
 }
 
 ```
-##347.前 K 个高频元
+##347.前 K 个高频元素
 
+参考的是官方题解，更容易理解一些：
 
+https://leetcode.cn/problems/top-k-frequent-elements/solution/leetcode-di-347-hao-wen-ti-qian-k-ge-gao-pin-yuan-/
 
 ```java
 public List<Integer> topKFrequent(int[] nums, int k) {
