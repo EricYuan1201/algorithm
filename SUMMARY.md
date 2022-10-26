@@ -19,3 +19,5 @@
     * [day10 232.用栈实现队列，225. 用队列实现栈](chapter5/section5.1.md)
     * [day11 20. 有效的括号，1047. 删除字符串中的所有相邻重复项，150. 逆波兰表达式求值](chapter5/section5.2.md)   
     * [day12 239. 滑动窗口最大值，347.前 K 个高频元素](chapter5/section5.3.md)
+* [树](chapter6/README.md)
+    * [day15 层序遍历，226.翻转二叉树，101.对称二叉树 2 ](chapter5/section5.3.md)
