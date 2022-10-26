@@ -1,77 +1,63 @@
-#5 层序遍历，226.翻转二叉树，101.对称二叉树 2
+#2 239. 滑动窗口最大值，347.前 K 个高频元
 
-##5 层序遍历
+##2 239. 滑动窗口最大值
 
-层序遍历是最基础的题了。核心是队列，for循环遍历队列
+滑动窗口 + 单调队列。
+
+参考的是这篇题解：
+https://leetcode.cn/problems/sliding-window-maximum/solution/dong-hua-yan-shi-dan-diao-dui-lie-239hua-hc5u/
 
 ```java
-public List<List<Integer>> levelOrder(TreeNode root) {
-    if (root == null) {
-        return null;
-    }
-    List<List<Integer>> res = new ArrayList<>();
-    Queue<TreeNode> queue = new LinkedList<>();
-    queue.offer(root);
-    while (!queue.isEmpty()) {
-        List<Integer> list = new ArrayList<>();
-        int size = queue.size();
-        for (int i = 0; i < size; i++) {
-            TreeNode poll = queue.poll();
-            if (poll != null) list.add(poll.val);
-            if (poll != null && poll.left != null) queue.offer(poll.left);
-            if (poll != null && poll.right != null) queue.offer(poll.right);
+public static int[] maxSlidingWindow(int[] nums, int k) {
+    int[] res = new int[nums.length - k + 1];
+    LinkedList<Integer> linkedList = new LinkedList<>();
+    for (int right = 0; right < nums.length; right++) {
+        while (!linkedList.isEmpty() && nums[right] >= nums[linkedList.peekLast()]) {
+            linkedList.removeLast();
         }
-        res.add(list);
+        linkedList.add(right);
+        int left = right - k + 1;
+        if (linkedList.peekFirst() < left) {
+            linkedList.removeFirst();
+        }
+        if (right + 1 >= k) {
+            res[left] = nums[linkedList.peekFirst()];
+        }
     }
     return res;
 }
 
 ```
-##226.翻转二叉树
+##347.前 K 个高频元
 
-之前做过，再写一遍吧。有点像反转链表，不过链表是while循环，这个是递归。
 
-```java
-public TreeNode invertTree(TreeNode root) {
-  innerInvertTree(root);
-  return root;
-}
-
-private void innerInvertTree(TreeNode root) {
-  if (root == null) {
-     return;
-  }
-  if (root.left == null && root.right == null) {
-     return;
-  }
-  TreeNode temp = root.left;
-  root.left = root.right;
-  root.right = temp;
-  innerInvertTree(root.left);
-  innerInvertTree(root.right);
-}
-
-```
-##101.对称二叉树 2
-
-这个其实也可以用层序遍历，然后获取每一层的元素，然后判断是否符合对称的结果。
 
 ```java
-public boolean isSymmetric(TreeNode root) {
-  if (root == null) return true;
-  return check(root.left, root.right);
-}
-
-private boolean check(TreeNode left, TreeNode right) {
-  if (left == null && right == null) {
-     return true;
-  }
-  if (left == null || right == null) {
-     return false;
-  }
-  return left.val == right.val
-          && check(left.left, right.right)
-          && check(left.right, right.left);
+public List<Integer> topKFrequent(int[] nums, int k) {
+    Map<Integer, Integer> map = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+        map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+    }
+    PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(new Comparator<Integer>() {
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            return map.get(o1) - map.get(o2);
+        }
+    });
+    for (Integer key : map.keySet()) {
+        if (priorityQueue.size() <= k) {
+            priorityQueue.add(key);
+        } else if (map.get(key) > map.get(priorityQueue.peek())) {
+            priorityQueue.remove();
+            priorityQueue.add(key);
+        }
+    }
+    // 取出最小堆中的元素
+    List<Integer> res = new ArrayList<>();
+    while (!priorityQueue.isEmpty()) {
+        res.add(priorityQueue.remove());
+    }
+    return res;
 }
 
 ```
