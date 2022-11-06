@@ -28,5 +28,8 @@
     * [day21 530.二叉搜索树的最小绝对差，501.二叉搜索树中的众数，236. 二叉树的最近公共祖先 ](chapter6/section6.8.md)
     * [day22 235. 二叉搜索树的最近公共祖先，701.二叉搜索树中的插入操作，450.删除二叉搜索树中的节点 ](chapter6/section6.9.md)
     * [day23 538.把二叉搜索树转换为累加树，108.将有序数组转换为二叉搜索树 ，669. 修剪二叉搜索树 ](chapter6/section6.10.md)
-    * [树总结一](chapter6/section6.11.md)
+    * [树总结一遍历DFS](chapter6/section6.11.md)
+    * [树总结二遍历BFS](chapter6/section6.12.md)
+    * [树总结——递归解题](chapter6/section6.13.md)
+    * [树总结——二叉搜索树](chapter6/section6.14.md)
 

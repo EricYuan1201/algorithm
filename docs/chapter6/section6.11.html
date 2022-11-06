@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>树总结一 · GitBook</title>
+        <title>树总结一遍历DFS · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -56,6 +56,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="section6.12.html" />
     
     
     <link rel="prev" href="section6.10.html" />
@@ -487,7 +489,46 @@
                 <a href="section6.11.html">
             
                     
-                    树总结一
+                    树总结一遍历DFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="section6.12.html">
+            
+                <a href="section6.12.html">
+            
+                    
+                    树总结二遍历BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="section6.13.html">
+            
+                <a href="section6.13.html">
+            
+                    
+                    树总结——递归解题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="section6.14.html">
+            
+                <a href="section6.14.html">
+            
+                    
+                    树总结——二叉搜索树
             
                 </a>
             
@@ -530,7 +571,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >树总结一</a>
+        <a href=".." >树总结一遍历DFS</a>
     </h1>
 </div>
 
@@ -545,8 +586,50 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6811;&#x603B;&#x7ED3;&#x4E00;">&#x6811;&#x603B;&#x7ED3;&#x4E00;</h1>
+                                <h1 id="&#x6811;&#x603B;&#x7ED3;&#x4E00;-&#xFF08;&#x904D;&#x5386;&#xFF09;">&#x6811;&#x603B;&#x7ED3;&#x4E00; &#xFF08;&#x904D;&#x5386;&#xFF09;</h1>
+<h3 id="&#x6811;&#x7684;&#x904D;&#x5386;&#x6982;&#x5FF5;&#xFF1A;">&#x6811;&#x7684;&#x904D;&#x5386;&#x6982;&#x5FF5;&#xFF1A;</h3>
+<p>&#x7406;&#x89E3;&#x524D;&#x5E8F;&#x3001;&#x4E2D;&#x5E8F;&#x3001;&#x540E;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#xFF08;&#x770B;&#x7740;&#x8FD9;&#x4E2A;&#x56FE;&#x80FD;&#x591F;&#x7406;&#x89E3;&#x904D;&#x5386;&#x987A;&#x5E8F;&#xFF09;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/EricYuan1201/img/2022-11-06_d80b00f4db40.jpg" alt="2022-11-06_d80b00f4db40.jpg"></p>
+<pre><code>&#x524D;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#x5148;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x6240;&#x6709;&#x7684;&#x5DE6;&#x8FB9;&#x7684;&#x904D;&#x5386;&#x5B8C;&#xFF0C;&#x7136;&#x540E;&#x904D;&#x5386;&#x53F3;&#x3002;
 
+&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#x5148;&#x5DE6;&#xFF0C;&#x7136;&#x540E;&#x4E2D;&#xFF0C;&#x6700;&#x540E;&#x662F;&#x53F3;&#x3002;
+
+&#x540E;&#x5E8F;&#x904D;&#x5386;&#xFF1A;&#x5148;&#x5DE6;&#xFF0C;&#x540E;&#x53F3;&#xFF0C;&#x6700;&#x540E;&#x662F;&#x4E2D;&#x3002;
+</code></pre><h3 id="&#x6811;&#x7684;&#x904D;&#x5386;&#x7B97;&#x6CD5;&#xFF1A;">&#x6811;&#x7684;&#x904D;&#x5386;&#x7B97;&#x6CD5;&#xFF1A;</h3>
+<h4 id="1-&#x9012;&#x5F52;&#x5199;&#x6CD5;">1. &#x9012;&#x5F52;&#x5199;&#x6CD5;</h4>
+<pre><code>    public void preOrderTree(){}
+
+    public void inorderTree(){}
+
+    public void postOrderTree(){}
+
+    /**
+     * &#x5982;&#x679C;&#x662F;&#x9012;&#x5F52;&#x7248;&#x672C;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x6574;&#x4E0B;&#x9762;3&#x884C;&#x4EE3;&#x7801;&#x7684;&#x987A;&#x5E8F;&#x5373;&#x53EF;&#x3002;
+     */
+    public void order(TreeNode node, List&lt;TreeNode&gt; res){
+        if (node == null) {
+            return;
+        }
+        order(node.left, res);
+        res.add(node);
+        order(node.right, res);
+    }
+</code></pre><h4 id="2-&#x8FED;&#x4EE3;&#x5199;&#x6CD5;&#xFF1A;">2. &#x8FED;&#x4EE3;&#x5199;&#x6CD5;&#xFF1A;</h4>
+<p><strong>&#x5148;&#x5E8F;&#x904D;&#x5386;</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/EricYuan1201/img/2022-11-06_758e9e9cf25a.jpg" alt="2022-11-06_758e9e9cf25a.jpg"> </p>
+<p><strong>&#x4E2D;&#x5E8F;&#x904D;&#x5386;</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/EricYuan1201/img/2022-11-06_b749e1b2d5ef.jpg" alt="2022-11-06_b749e1b2d5ef.jpg"></p>
+<p><strong>&#x540E;&#x5E8F;&#x904D;&#x5386;</strong>
+<img src="https://cdn.jsdelivr.net/gh/EricYuan1201/img/2022-11-06_c48a928a4785.jpg" alt="2022-11-06_c48a928a4785.jpg"></p>
+<h3 id="&#x603B;&#x7ED3;&#xFF1A;">&#x603B;&#x7ED3;&#xFF1A;</h3>
+<pre><code>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x9012;&#x5F52;&#x904D;&#x5386;&#x4E00;&#x822C;&#x662F;easy&#x7EA7;&#x522B;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x7528;&#x8FED;&#x4EE3;&#x5C31;&#x53D8;&#x6210;&#x4E86;medium&#x6216;&#x8005;hard&#x4E86;&#x3002;
+
+
+&#xFF08;&#x4E2D;&#x5348;&#x4F11;&#x606F;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x6709;&#x70B9;&#x6000;&#x7591;&#x81EA;&#x5DF1;&#x73B0;&#x5728;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x662F;&#x5426;&#x6709;&#x610F;&#x4E49;&#xFF09;
+
+
+&#x8FED;&#x4EE3;&#x662F;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5728;&#x8111;&#x5B50;&#x91CC;&#x8FC7;&#x4E00;&#x4E9B;&#x6574;&#x4E2A;&#x987A;&#x5E8F;&#xFF0C;&#x5982;&#x679C;&#x81EA;&#x5DF1;&#x5927;&#x8111;&#x7684;&#x63A8;&#x6F14;&#x80FD;&#x529B;&#x4E0D;&#x884C;&#x7684;&#x8BDD;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x5C31;&#x4E2D;&#x65AD;&#x4E86;&#x3002;
+</code></pre>
                                 
                                 </section>
                             
@@ -573,10 +656,14 @@
 
             
                 
-                <a href="section6.10.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: day23 538.把二叉搜索树转换为累加树，108.将有序数组转换为二叉搜索树 ，669. 修剪二叉搜索树 ">
+                <a href="section6.10.html" class="navigation navigation-prev " aria-label="Previous page: day23 538.把二叉搜索树转换为累加树，108.将有序数组转换为二叉搜索树 ，669. 修剪二叉搜索树 ">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="section6.12.html" class="navigation navigation-next " aria-label="Next page: 树总结二遍历BFS">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -585,7 +672,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"树总结一","level":"1.7.9","depth":2,"previous":{"title":"day23 538.把二叉搜索树转换为累加树，108.将有序数组转换为二叉搜索树 ，669. 修剪二叉搜索树 ","level":"1.7.8","depth":2,"path":"chapter6/section6.10.md","ref":"chapter6/section6.10.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/section6.11.md","mtime":"2022-11-06T04:04:32.149Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-06T04:14:46.572Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"树总结一遍历DFS","level":"1.7.9","depth":2,"next":{"title":"树总结二遍历BFS","level":"1.7.10","depth":2,"path":"chapter6/section6.12.md","ref":"chapter6/section6.12.md","articles":[]},"previous":{"title":"day23 538.把二叉搜索树转换为累加树，108.将有序数组转换为二叉搜索树 ，669. 修剪二叉搜索树 ","level":"1.7.8","depth":2,"path":"chapter6/section6.10.md","ref":"chapter6/section6.10.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/section6.11.md","mtime":"2022-11-06T06:42:50.863Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-06T08:18:25.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
