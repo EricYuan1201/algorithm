@@ -32,4 +32,5 @@
     * [树总结二遍历BFS](chapter6/section6.12.md)
     * [树总结——递归解题](chapter6/section6.13.md)
     * [树总结——二叉搜索树](chapter6/section6.14.md)
-
+* [回溯](chapter7/README.md)
+    * [day26 39. 组合总和，40.组合总和II，131.分割回文串](chapter7/section7.1.md)
