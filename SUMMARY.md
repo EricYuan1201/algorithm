@@ -34,3 +34,4 @@
     * [树总结——二叉搜索树](chapter6/section6.14.md)
 * [回溯](chapter7/README.md)
     * [day26 39. 组合总和，40.组合总和II，131.分割回文串](chapter7/section7.1.md)
+    * [day29 491.递增子序列，46.全排列，47.全排列 II  ](chapter7/section7.1.md)
