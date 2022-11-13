@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串  · GitBook</title>
+        <title>day30 51. N皇后，回溯总结  · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="section4.2.html" />
+    <link rel="next" href="../chapter8/" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="section7.3.html" />
     
 
     </head>
@@ -263,9 +263,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
             
-                <a href="./">
+                <a href="../chapter4/">
             
                     
                     字符串
@@ -277,9 +277,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.5.1" data-path="section4.1.html">
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/section4.1.html">
             
-                <a href="section4.1.html">
+                <a href="../chapter4/section4.1.html">
             
                     
                     day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 
@@ -290,9 +290,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="section4.2.html">
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/section4.2.html">
             
-                <a href="section4.2.html">
+                <a href="../chapter4/section4.2.html">
             
                     
                     day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾
@@ -541,9 +541,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+        <li class="chapter " data-level="1.8" data-path="./">
             
-                <a href="../chapter7/">
+                <a href="./">
             
                     
                     回溯
@@ -555,9 +555,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../chapter7/section7.1.html">
+        <li class="chapter " data-level="1.8.1" data-path="section7.1.html">
             
-                <a href="../chapter7/section7.1.html">
+                <a href="section7.1.html">
             
                     
                     day26 39. 组合总和，40.组合总和II，131.分割回文串
@@ -568,9 +568,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="../chapter7/section7.2.html">
+        <li class="chapter " data-level="1.8.2" data-path="section7.2.html">
             
-                <a href="../chapter7/section7.2.html">
+                <a href="section7.2.html">
             
                     
                     day29 491.递增子序列，46.全排列，47.全排列 II  
@@ -581,9 +581,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="../chapter7/section7.3.html">
+        <li class="chapter " data-level="1.8.3" data-path="section7.3.html">
             
-                <a href="../chapter7/section7.3.html">
+                <a href="section7.3.html">
             
                     
                     day29 78. 子集，90. 子集 II 
@@ -594,9 +594,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="../chapter7/section7.4.html">
+        <li class="chapter active" data-level="1.8.4" data-path="section7.4.html">
             
-                <a href="../chapter7/section7.4.html">
+                <a href="section7.4.html">
             
                     
                     day30 51. N皇后，回溯总结 
@@ -687,7 +687,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 </a>
+        <a href=".." >day30 51. N皇后，回溯总结 </a>
     </h1>
 </div>
 
@@ -702,108 +702,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="day08-344&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;541-&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;ii&#xFF0C;-&#x5251;&#x6307;offer-05&#x66FF;&#x6362;&#x7A7A;&#x683C;&#xFF0C;151&#x7FFB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x5251;&#x6307;offer58-ii&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;">day08 344.&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;541. &#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;II&#xFF0C; &#x5251;&#x6307;Offer 05.&#x66FF;&#x6362;&#x7A7A;&#x683C;&#xFF0C;151.&#x7FFB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x5251;&#x6307;Offer58-II.&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</h1>
-<h2 id="day08-344&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;">day08 344.&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</h2>
-<p>&#x5148;&#x4E0D;&#x5199;&#x4E86;</p>
-<pre><code class="lang-java">
+                                <h1 id="day30-51-n&#x7687;&#x540E;&#xFF0C;&#x56DE;&#x6EAF;&#x603B;&#x7ED3;">day30 51. N&#x7687;&#x540E;&#xFF0C;&#x56DE;&#x6EAF;&#x603B;&#x7ED3;</h1>
+<h2 id="1&#x56DE;&#x6EAF;&#x8BA4;&#x8BC6;&#xFF1A;">1.&#x56DE;&#x6EAF;&#x8BA4;&#x8BC6;&#xFF1A;</h2>
+<pre><code>&#x7EC4;&#x5408;&#x662F;&#x56DE;&#x6EAF;&#x91CC;&#x9762;&#x6700;&#x7B80;&#x5355;&#x7684;&#x3002;
+&#x56DE;&#x6EAF;&#x7684;&#x672C;&#x8D28;&#x6211;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E86;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x6C42;&#x603B;&#x548C;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x5BF9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x5148;&#x5C1D;&#x8BD5;&#x52A0;&#x5165;&#xFF0C;&#x7136;&#x540E;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x53EF;&#x80FD;&#xFF0C;
+&#x7136;&#x540E;&#x518D;&#x53D6;&#x6D88;&#x52A0;&#x5165;&#x7684;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x52A0;&#x5165;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;
+&#x5229;&#x7528;&#x4E86;&#x9012;&#x5F52;&#x7684;&#x601D;&#x60F3;&#x3002;&#x5982;&#x679C;&#x662F;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x9996;&#x5148;&#x662F;&#x6709;&#x904D;&#x5386;&#x3002;
+</code></pre><h2 id="1&#x9898;&#x578B;&#x603B;&#x7ED3;&#xFF1A;">1.&#x9898;&#x578B;&#x603B;&#x7ED3;&#xFF1A;</h2>
+<h3 id="&#x7EC4;&#x5408;">&#x7EC4;&#x5408;</h3>
+<blockquote>
+<p>&#x7EC4;&#x5408;&#x7684;&#x9898;&#x662F;&#x56DE;&#x6EAF;&#x4E09;&#x5927;&#x7C7B;&#x91CC;&#x9762;&#x4EE3;&#x7801;&#x6700;&#x5C11;&#x7684;&#x3002;&#x7EC4;&#x5408;&#x662F;&#x6C42;&#x548C;&#xFF0C;[1,2,3]&#x548C;[2,1,3]&#x7684;&#x89E3;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+</blockquote>
+<pre><code>  1.for&#x5FAA;&#x73AF;
+  2.dfs
+  3.&#x4ECE;begin&#x5F00;&#x59CB;&#xFF0C;&#x4E0B;&#x4E00;&#x6B21;&#x5230;i/i+1 &#xFF08;&#x8981;&#x770B;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x91CD;&#x590D;&#x5143;&#x7D20;&#xFF01;&#xFF09;
+  4.&#x8981;&#x6CE8;&#x610F;new ArrayList(list1)
+  5.&#x5982;&#x679C;&#x6709;&#x91CD;&#x590D;&#xFF0C;&#x5C31;Arrays.sort()&#xFF0C;&#x7136;&#x540E;if(arr[i] == arr[i-1]) continue.
+  6.dfs&#x91CC;&#x9762;&#x4E00;&#x5B9A;&#x8981;&#x6709;&#x7EC8;&#x6B62;&#x6761;&#x4EF6;&#x3002;
+</code></pre><blockquote>
+<p>&#x6392;&#x5217;&#xFF0C;&#x662F;&#x6C42;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x53EF;&#x80FD;&#x7684;&#x6392;&#x5217;&#x65B9;&#x5F0F;&#xFF0C;&#x5168;&#x6392;&#x5217;&#x4E2D; [1,2,3] &#x548C; [2,1,3] &#x90FD;&#x662F;&#x89E3;&#x3002;</p>
+</blockquote>
+<pre><code>  1.&#x6BCF;&#x6B21;&#x90FD;&#x662F;&#x4ECE;0&#x5F00;&#x59CB;&#x904D;&#x5386;&#x3002;&#xFF08;&#x4E3A;&#x4EC0;&#x4E48;&#x4ECE;0&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x89E3;&#xFF09;
+  2.&#x5F00;&#x59CB;&#x4F7F;&#x7528;isUsed&#x6570;&#x7EC4;&#x4E86;&#x3002;&#x56E0;&#x4E3A;&#x6BCF;&#x6B21;&#x90FD;&#x662F;&#x4ECE;0&#xFF0C;&#x9700;&#x8981;&#x5728;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x7684;&#x65F6;&#x5019;&#x8D8A;&#x8FC7;&#x67D0;&#x4E9B;&#x5143;&#x7D20;&#x3002;
+  3.&#x7EC8;&#x6B62;&#x6761;&#x4EF6;&#x662F;&#xFF0C;&#x901A;&#x8FC7;depth&#x5224;&#x65AD;&#x7684;&#xFF0C;&#x4E0D;&#x7528;depth&#x4E5F;&#x53EF;&#x4EE5;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;count&#x3002;
+  4.list.remove(index)
+  5.&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x53EF;&#x5305;&#x542B;&#x91CD;&#x590D;&#x6570;&#x5B57;&#x7684;&#x5E8F;&#x5217; nums &#xFF0C;&#x6309;&#x4EFB;&#x610F;&#x987A;&#x5E8F; &#x8FD4;&#x56DE;&#x6240;&#x6709;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x5168;&#x6392;&#x5217;&#x3002;
+    &#x5E26;&#x6709;&#x91CD;&#x590D;&#x6570;&#x5B57;&#xFF0C;&#x6700;&#x96BE;&#x7406;&#x89E3;&#x7684;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x90A3;&#x4E2A; ![nums[i-1]]
+</code></pre><p><strong>&#x770B;&#x4E86;&#x4E00;&#x4E2A;&#x8001;&#x54E5;&#x7684;&#x8BB2;&#x89E3;&#xFF0C;&#x5927;&#x6982;&#x660E;&#x767D;&#x5176;&#x601D;&#x8DEF;&#x4E86;&#x3002;</strong></p>
+<pre><code>&#x5982;&#x679C;&#x524D;&#x4E00;&#x4E2A;&#x201C;&#x76F8;&#x540C;&#x5143;&#x7D20;&#x201D;&#x672A;&#x88AB;&#x4F7F;&#x7528;&#x8FC7;&#xFF0C;&#x5219;&#x4E0D;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x3002; &#x4F8B;&#x5982;[1 2 2&#x2018;]&#x53EF;&#x80FD;&#x51FA;&#x73B0;[1 2 2&apos;] &#x548C;[1 2&#x2018; 2] &#x7684;&#x60C5;&#x51B5;&#x3002;
+&#x5982;&#x679C;&#x201C;&#x5B58;&#x5728;&#x524D;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x5143;&#x7D20;&#x201D; &#x4E14;&#x201C;&#x672A;&#x88AB;&#x4F7F;&#x7528;&#x8FC7;&#x201D;, &#x5F53;&#x73B0;&#x6709;&#x6392;&#x5217;&#x662F;[1 2&apos;]&#x65F6;&#xFF0C;
+&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;[1 2 2&#x2018;]&#x4E2D;2&#x2019;&#x5B58;&#x5728;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;2&#x4E0E;&#x5176;&#x76F8;&#x540C;&#xFF0C;&#x4E14;&#x6B64;&#x65F6;2&#x672A;&#x88AB;&#x8BBF;&#x95EE;&#x8FC7;&#xFF0C;&#x8DF3;&#x8FC7;&#x3002;
+[1 2 2&apos;]&#x7684;&#x6392;&#x5217;&#x5148;&#x4E8E;[1 2&apos; 2]&#x5B58;&#x5728;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x53BB;&#x9664;&#x3002;
 
-</code></pre>
-<h2 id="541-&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;ii">541. &#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;II</h2>
-<p>&#x8FB9;&#x754C;&#x6761;&#x4EF6;&#x6CA1;&#x5199;&#x597D;</p>
-<pre><code class="lang-java">
-    <span class="hljs-comment">/**
-     * &#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; s &#x548C;&#x4E00;&#x4E2A;&#x6574;&#x6570; k&#xFF0C;&#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x5F00;&#x5934;&#x7B97;&#x8D77;&#xFF0C;&#x6BCF;&#x8BA1;&#x6570;&#x81F3; 2k &#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5C31;&#x53CD;&#x8F6C;&#x8FD9; 2k &#x5B57;&#x7B26;&#x4E2D;&#x7684;&#x524D; k &#x4E2A;&#x5B57;&#x7B26;&#x3002;
-     * &lt;p&gt;
-     * &#x5982;&#x679C;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x5C11;&#x4E8E; k &#x4E2A;&#xFF0C;&#x5219;&#x5C06;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x5168;&#x90E8;&#x53CD;&#x8F6C;&#x3002;
-     * &#x5982;&#x679C;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x5C0F;&#x4E8E; 2k &#x4F46;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; k &#x4E2A;&#xFF0C;&#x5219;&#x53CD;&#x8F6C;&#x524D; k &#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5176;&#x4F59;&#x5B57;&#x7B26;&#x4FDD;&#x6301;&#x539F;&#x6837;&#x3002;
-     */</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">reverseStr</span><span class="hljs-params">(String s, <span class="hljs-keyword">int</span> k)</span> </span>{
-        <span class="hljs-keyword">int</span> length = s.length();
-        <span class="hljs-keyword">char</span>[] chars = s.toCharArray();
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i = i + <span class="hljs-number">2</span> * k) {
-            <span class="hljs-keyword">int</span> left = i;
-            <span class="hljs-keyword">int</span> right = Math.min(i + k-<span class="hljs-number">1</span>, length - <span class="hljs-number">1</span>);
-             revert(chars, left, right);
-        }
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> String(chars);
-    }
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">revert</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] chars, <span class="hljs-keyword">int</span> left, <span class="hljs-keyword">int</span> right)</span> </span>{
-        <span class="hljs-keyword">while</span> (left &lt;= right) {
-            <span class="hljs-keyword">char</span> temp = chars[right];
-            chars[right] = chars[left];
-            chars[left] = temp;
-            left++;
-            right++;
-        }
-    }
+&#x6B63;&#x5E38;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x524D;&#x9762;&#x90A3;&#x4E2A;&#x5143;&#x7D20;&#x7528;&#x8FC7;&#x624D;&#x662F;&#x6B63;&#x89E3;&#xFF0C;&#x8BF4;&#x660E;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x6392;&#x5217;&#x3002;
+&#x5982;&#x679C;&#x524D;&#x9762;&#x90A3;&#x4E2A;&#x5143;&#x7D20;&#x672A;&#x7528;&#x8FC7;&#xFF0C;&#x8BF4;&#x660E;&#x4F7F;&#x7528;&#x7684;&#x662F;1&#xFF0C;2&#x2019;&#xFF0C;2&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x548C;&#x524D;&#x9762;&#x7684;&#x5DF2;&#x7ECF;&#x91CD;&#x590D;&#x4E86;&#x3002;
+</code></pre><blockquote>
+<p>&#x5B50;&#x96C6; &#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; nums &#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20; &#x4E92;&#x4E0D;&#x76F8;&#x540C; &#x3002;&#x8FD4;&#x56DE;&#x8BE5;&#x6570;&#x7EC4;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x5B50;&#x96C6;&#xFF08;&#x5E42;&#x96C6;&#xFF09;&#x3002;</p>
+</blockquote>
+<pre><code>  1.&#x5B50;&#x96C6;&#x7684;dfs&#x662F;&#x6700;&#x5C11;&#x7684;&#xFF0C;&#x5176;&#x5B9E;&#x4E0D;&#x662F;&#x6700;&#x5C11;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x62BD;&#x5230;&#x4E86;&#x6700;&#x5916;&#x5C42;&#x3002;
+  2.&#x7EC8;&#x6B62;&#x6761;&#x4EF6;&#xFF0C;&#x6BCF;&#x6B21;dfs&#x90FD;&#x8981;&#x628A;&#x7ED3;&#x679C;&#x52A0;&#x8FDB;&#x53BB;&#x3002;&#x5982;&#x679C;begin == length &#x4E5F;&#x7EC8;&#x6B62;&#x3002;
+  3.&#x4ECE;begin&#x5F00;&#x59CB;&#xFF0C;&#x5230;i+1. &#xFF01;&#xFF01;&#xFF01; &#x5361;&#x4E86;&#x534A;&#x5C0F;&#x65F6;
+  4.&#x4F9D;&#x7136;&#x662F;&#x548C;&#x4E0A;&#x6B21;&#x4E00;&#x6837;&#x8DF3;&#x8FC7;&#x903B;&#x8F91;&#x3002;    
+  5.&#x539F;&#x6765;&#x7EC4;&#x5408;&#x548C;&#x5B50;&#x96C6;&#x90FD;&#x662F;&#x4ECE;i&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4ECE;begin&#x5F00;&#x59CB;&#x7684;&#x3002;
+</code></pre><h2 id="&#x6700;&#x540E;&#x603B;&#x7ED3;">&#x6700;&#x540E;&#x603B;&#x7ED3;</h2>
+<pre><code>1.&#x7EC4;&#x5408;&#x90FD;&#x662F;&#x6709;begin&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4F46;&#x662F;&#x4E0B;&#x9762;&#x90FD;&#x662F; i+1
+2.&#x6392;&#x5217;&#x6CA1;&#x6709;begin&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5168;&#x90FD;&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;isUsed&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x3002;
 </code></pre>
-<h2 id="&#x5251;&#x6307;offer-05&#x66FF;&#x6362;&#x7A7A;&#x683C;">&#x5251;&#x6307;Offer 05.&#x66FF;&#x6362;&#x7A7A;&#x683C;</h2>
-<pre><code class="lang-java">
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">replaceSpace</span><span class="hljs-params">(String s)</span> </span>{
-        <span class="hljs-keyword">int</span> length = s.length();
-        <span class="hljs-keyword">char</span>[] chars = s.toCharArray();
-        <span class="hljs-keyword">char</span>[] newChars = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[length * <span class="hljs-number">3</span>];
-        <span class="hljs-keyword">int</span> size = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
-            <span class="hljs-keyword">if</span> (chars[i] == <span class="hljs-string">&apos; &apos;</span>) {
-                newChars[size] = <span class="hljs-string">&apos;%&apos;</span>;
-                newChars[size++] = <span class="hljs-string">&apos;2&apos;</span>;
-                newChars[size++] = <span class="hljs-string">&apos;0&apos;</span>;
-            } <span class="hljs-keyword">else</span> {
-                newChars[size] = chars[i];
-            }
-            size ++;
-        }
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> String(chars, <span class="hljs-number">0</span>, size);
-    }
-</code></pre>
-<h2 id="151&#x7FFB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x5355;&#x8BCD;">151.&#x7FFB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x7684;&#x5355;&#x8BCD;</h2>
-<p>while&#x5FAA;&#x73AF;&#x548C;for&#x5FAA;&#x73AF;&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
-<p>&#x9996;&#x5148;&#xFF0C;&#x4E24;&#x8005;&#x4ECE;&#x8868;&#x8FBE;&#x80FD;&#x529B;&#x4E0A;&#x8BF4;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF0C;&#x5373;&#x4E24;&#x8005;&#x80FD;&#x591F;&#x5B8C;&#x6210;&#x7684;&#x4E8B;&#x60C5;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x5176;&#x6B21;&#xFF0C;&#x7531;&#x4E8E;for&#x8BED;&#x53E5;&#x5C06;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5FAA;&#x73AF;&#x6761;&#x4EF6;&#x548C;&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x540E;&#x5BF9;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x7684;&#x4FEE;&#x6539;&#x653E;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x6BD4;&#x8F83;&#x6E05;&#x6670;&#x76F4;&#x89C2;&#x3002;&#x56E0;&#x6B64;for&#x8BED;&#x53E5;&#x5E38;&#x7528;&#x4E8E;&#x80FD;&#x591F;&#x9884;&#x5148;&#x5224;&#x65AD;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x7684;&#x5FAA;&#x73AF;&#x6216;&#x904D;&#x5386;&#x4E2D;&#x3002;&#x5982;&#x904D;&#x5386;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6216;&#x8005;&#x6267;&#x884C;&#x67D0;&#x64CD;&#x4F5C;&#x82E5;&#x5E72;&#x6B21;&#x4E4B;&#x7C7B;&#x3002;&#x6B64;&#x65F6;&#x7528;for&#x8BED;&#x53E5;&#x8F83;&#x4F18;&#x3002;</p>
-<p>while&#x8BED;&#x53E5;&#x7684;&#x5386;&#x53F2;&#x66F4;&#x4E45;&#xFF0C;&#x8868;&#x8FBE;&#x65B9;&#x5F0F;&#x4E0A;&#x66F4;&#x81EA;&#x7531;&#x7075;&#x6D3B;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x65E0;&#x6CD5;&#x4E8B;&#x5148;&#x5224;&#x65AD;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x7684;&#x5FAA;&#x73AF;&#x3002;&#x8B6C;&#x5982;&#x7ECF;&#x5178;&#x7684;&#x8BA1;&#x7B97;C&#x98CE;&#x683C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x53C8;&#x5982;&#x540E;&#x6839;&#x904D;&#x5386;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x975E;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#x3002;&#x6B64;&#x65F6;&#x7528;while&#x8BED;&#x53E5;&#x4F1A;&#x4F7F;&#x7A0B;&#x5E8F;&#x66F4;&#x6E05;&#x6670;&#x3002;&#x6700;&#x540E;&#x5F3A;&#x8C03;&#xFF0C;&#x4E24;&#x8005;&#x4ECE;&#x8868;&#x8FBE;&#x80FD;&#x529B;&#x4E0A;&#x8BF4;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">reverseWords</span><span class="hljs-params">(String s)</span> </span>{
-    <span class="hljs-keyword">int</span> left = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">int</span> right = s.length() - <span class="hljs-number">1</span>;
-    <span class="hljs-comment">//&#x9996;&#x5148;&#x53BB;&#x9664;&#x4E86;&#x4E24;&#x8FB9;&#x7684;&#x7A7A;&#x683C;</span>
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = left; i &lt;= right; i++) {
-        <span class="hljs-keyword">if</span> (s.charAt(i) == <span class="hljs-string">&apos; &apos;</span>) {
-            left++;
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">break</span>;
-        }
-    }
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = right; i &gt;= left; i--) {
-        <span class="hljs-keyword">if</span> (s.charAt(i) == <span class="hljs-string">&apos; &apos;</span>) {
-            right--;
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">break</span>;
-        }
-    }
-    StringBuilder stringBuilder = <span class="hljs-keyword">new</span> StringBuilder();
-    <span class="hljs-keyword">while</span> (right &gt;= left) {
-        <span class="hljs-keyword">int</span> index = right;
-        <span class="hljs-keyword">while</span> (right &gt;= <span class="hljs-number">0</span> &amp;&amp; s.charAt(right) != <span class="hljs-string">&apos; &apos;</span>) {
-            right--;
-        }
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = right + <span class="hljs-number">1</span>; i &lt;= index; i++) {
-            stringBuilder.append(s.charAt(i));
-        }
-        <span class="hljs-keyword">if</span> (right &gt; left) {
-            stringBuilder.append(<span class="hljs-string">&quot; &quot;</span>);
-        }
-        <span class="hljs-keyword">while</span> (right &gt;= <span class="hljs-number">0</span> &amp;&amp; s.charAt(right) == <span class="hljs-string">&apos; &apos;</span>) {
-            right --;
-        }
-    }
-    <span class="hljs-keyword">return</span> stringBuilder.toString();
-}
-</code></pre>
-<h2 id="&#x5251;&#x6307;offer58-ii&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;">&#x5251;&#x6307;Offer58-II.&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</h2>
-<pre><code class="lang-java">
-
-</code></pre>
-
                                 
                                 </section>
                             
@@ -830,12 +775,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 字符串">
+                <a href="section7.3.html" class="navigation navigation-prev " aria-label="Previous page: day29 78. 子集，90. 子集 II ">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="section4.2.html" class="navigation navigation-next " aria-label="Next page: day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾">
+                <a href="../chapter8/" class="navigation navigation-next " aria-label="Next page: 贪心算法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -846,7 +791,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 ","level":"1.5.1","depth":2,"next":{"title":"day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾","level":"1.5.2","depth":2,"path":"chapter4/section4.2.md","ref":"chapter4/section4.2.md","articles":[]},"previous":{"title":"字符串","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"day08 344.反转字符串，541. 反转字符串II， 剑指Offer 05.替换空格，151.翻转字符串里的单词，剑指Offer58-II.左旋转字符串 ","level":"1.5.1","depth":2,"path":"chapter4/section4.1.md","ref":"chapter4/section4.1.md","articles":[]},{"title":"day09 28. 实现 strStr()，459.重复的子字符串，字符串总结，双指针回顾","level":"1.5.2","depth":2,"path":"chapter4/section4.2.md","ref":"chapter4/section4.2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter4/section4.1.md","mtime":"2022-11-06T03:59:19.509Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-13T07:13:50.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day30 51. N皇后，回溯总结 ","level":"1.8.4","depth":2,"next":{"title":"贪心算法","level":"1.9","depth":1,"path":"chapter8/README.md","ref":"chapter8/README.md","articles":[{"title":"day31 53. 最大子序和，455.分发饼干，376. 摆动序列 ","level":"1.9.1","depth":2,"path":"chapter8/section8.1.md","ref":"chapter8/section8.1.md","articles":[]},{"title":"day32 122.买卖股票的最佳时机II，55. 跳跃游戏，45.跳跃游戏II ","level":"1.9.2","depth":2,"path":"chapter8/section8.2.md","ref":"chapter8/section8.2.md","articles":[]}]},"previous":{"title":"day29 78. 子集，90. 子集 II ","level":"1.8.3","depth":2,"path":"chapter7/section7.3.md","ref":"chapter7/section7.3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter7/section7.4.md","mtime":"2022-11-13T07:08:35.369Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-13T07:13:50.690Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

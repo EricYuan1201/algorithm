@@ -36,4 +36,7 @@
     * [day26 39. 组合总和，40.组合总和II，131.分割回文串](chapter7/section7.1.md)
     * [day29 491.递增子序列，46.全排列，47.全排列 II  ](chapter7/section7.2.md)
     * [day29 78. 子集，90. 子集 II ](chapter7/section7.3.md)
-
+    * [day30 51. N皇后，回溯总结 ](chapter7/section7.4.md)
+* [贪心算法](chapter8/README.md)
+    * [day31 53. 最大子序和，455.分发饼干，376. 摆动序列 ](chapter8/section8.1.md)
+    * [day32 122.买卖股票的最佳时机II，55. 跳跃游戏，45.跳跃游戏II ](chapter8/section8.2.md)
