@@ -40,3 +40,4 @@
 * [贪心算法](chapter8/README.md)
     * [day31 53. 最大子序和，455.分发饼干，376. 摆动序列 ](chapter8/section8.1.md)
     * [day32 122.买卖股票的最佳时机II，55. 跳跃游戏，45.跳跃游戏II ](chapter8/section8.2.md)
+    * [day35 860.柠檬水找零，406.根据身高重建队列，452. 用最少数量的箭引爆气球  ](chapter8/section8.3.md)
