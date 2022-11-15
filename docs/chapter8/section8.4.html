@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>哈希表 · GitBook</title>
+        <title>day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站  · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="section3.1.html" />
     
-    
-    <link rel="prev" href="../chapter2/section2.3.html" />
+    <link rel="prev" href="section8.3.html" />
     
 
     </head>
@@ -218,9 +216,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
             
-                <a href="./">
+                <a href="../chapter3/">
             
                     
                     哈希表
@@ -232,9 +230,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="section3.1.html">
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/section3.1.html">
             
-                <a href="section3.1.html">
+                <a href="../chapter3/section3.1.html">
             
                     
                     day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 
@@ -245,9 +243,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="section3.2.html">
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/section3.2.html">
             
-                <a href="section3.2.html">
+                <a href="../chapter3/section3.2.html">
             
                     
                     day07 454.四数相加II，383. 赎金信， 15. 三数之和，18. 四数之和
@@ -612,9 +610,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+        <li class="chapter " data-level="1.9" data-path="./">
             
-                <a href="../chapter8/">
+                <a href="./">
             
                     
                     贪心算法
@@ -626,9 +624,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../chapter8/section8.1.html">
+        <li class="chapter " data-level="1.9.1" data-path="section8.1.html">
             
-                <a href="../chapter8/section8.1.html">
+                <a href="section8.1.html">
             
                     
                     day31 53. 最大子序和，455.分发饼干，376. 摆动序列 
@@ -639,9 +637,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../chapter8/section8.2.html">
+        <li class="chapter " data-level="1.9.2" data-path="section8.2.html">
             
-                <a href="../chapter8/section8.2.html">
+                <a href="section8.2.html">
             
                     
                     day32 122.买卖股票的最佳时机II，55. 跳跃游戏，45.跳跃游戏II 
@@ -652,9 +650,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="../chapter8/section8.3.html">
+        <li class="chapter " data-level="1.9.3" data-path="section8.3.html">
             
-                <a href="../chapter8/section8.3.html">
+                <a href="section8.3.html">
             
                     
                     day35 860.柠檬水找零，406.根据身高重建队列，452. 用最少数量的箭引爆气球  
@@ -665,9 +663,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.4" data-path="../chapter8/section8.4.html">
+        <li class="chapter active" data-level="1.9.4" data-path="section8.4.html">
             
-                <a href="../chapter8/section8.4.html">
+                <a href="section8.4.html">
             
                     
                     day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 
@@ -713,7 +711,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >哈希表</a>
+        <a href=".." >day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 </a>
     </h1>
 </div>
 
@@ -728,7 +726,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x54C8;&#x5E0C;&#x8868;">&#x54C8;&#x5E0C;&#x8868;</h1>
+                                <h1 id="4-135-&#x5206;&#x53D1;&#x7CD6;&#x679C;&#xFF0C;1005k&#x6B21;&#x53D6;&#x53CD;&#x540E;&#x6700;&#x5927;&#x5316;&#x7684;&#x6570;&#x7EC4;&#x548C;&#xFF0C;134-&#x52A0;&#x6CB9;&#x7AD9;">4 135. &#x5206;&#x53D1;&#x7CD6;&#x679C;&#xFF0C;1005.K&#x6B21;&#x53D6;&#x53CD;&#x540E;&#x6700;&#x5927;&#x5316;&#x7684;&#x6570;&#x7EC4;&#x548C;&#xFF0C;134. &#x52A0;&#x6CB9;&#x7AD9;</h1>
+<h2 id="4-135-&#x5206;&#x53D1;&#x7CD6;&#x679C;">4 135. &#x5206;&#x53D1;&#x7CD6;&#x679C;</h2>
+<p>&#x5DE6;&#x89C4;&#x5219;&#xFF0C;&#x53F3;&#x89C4;&#x5219;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">candy</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] ratings)</span> </span>{
+    <span class="hljs-keyword">int</span> n = ratings.length;
+    <span class="hljs-keyword">int</span>[] left = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+    left[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++) {
+        <span class="hljs-keyword">if</span> (ratings[i] &gt; ratings[i - <span class="hljs-number">1</span>]) {
+            left[i] = left[i - <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {
+            left[i] = <span class="hljs-number">1</span>;
+        }
+    }
+    <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span>[] right = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = n - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        <span class="hljs-keyword">if</span> (i &lt; n - <span class="hljs-number">1</span> &amp;&amp; ratings[i] &gt; ratings[i + <span class="hljs-number">1</span>]) {
+            right[i] = right[i + <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {
+            right[i] = <span class="hljs-number">1</span>;
+        }
+        res += Math.max(left[i], right[i]);
+    }
+    <span class="hljs-keyword">return</span> res;
+<span class="hljs-comment">//        int right = 0, ret = 0;</span>
+<span class="hljs-comment">//        for (int i = n - 1; i &gt;= 0; i--) {</span>
+<span class="hljs-comment">//            if (i &lt; n - 1 &amp;&amp; ratings[i] &gt; ratings[i + 1]) {</span>
+<span class="hljs-comment">//                right++;</span>
+<span class="hljs-comment">//            } else {</span>
+<span class="hljs-comment">//                right = 1;</span>
+<span class="hljs-comment">//            }</span>
+<span class="hljs-comment">//            ret += Math.max(left[i], right);</span>
+<span class="hljs-comment">//        }</span>
+<span class="hljs-comment">//        return ret;</span>
+}
+</code></pre>
+<h2 id="1005k&#x6B21;&#x53D6;&#x53CD;&#x540E;&#x6700;&#x5927;&#x5316;&#x7684;&#x6570;&#x7EC4;&#x548C;">1005.K&#x6B21;&#x53D6;&#x53CD;&#x540E;&#x6700;&#x5927;&#x5316;&#x7684;&#x6570;&#x7EC4;&#x548C;</h2>
+<p>&#x5F88;&#x8003;&#x9A8C;&#x6570;&#x5B66;&#x77E5;&#x8BC6;</p>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * &#x6709;&#x4E00;&#x70B9;&#x70B9;&#x601D;&#x8DEF;&#xFF0C;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#xFF0C;&#x53EA;&#x770B;&#x8D1F;&#x6570;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">largestSumAfterKNegations</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> k)</span> </span>{
+    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+    Arrays.sort(nums);
+    <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) {
+        <span class="hljs-keyword">if</span> (nums[i] &lt; <span class="hljs-number">0</span> &amp;&amp; k &gt; <span class="hljs-number">0</span>) {
+            nums[i] = -nums[i];
+            k--;
+        }
+        sum += nums[i];
+    }
+    Arrays.sort(nums);
+    <span class="hljs-keyword">return</span> sum + (k % <span class="hljs-number">2</span>) == <span class="hljs-number">0</span> ? <span class="hljs-number">0</span> : -nums[<span class="hljs-number">0</span>];
+}
+</code></pre>
+<h2 id="134-&#x52A0;&#x6CB9;&#x7AD9;">134. &#x52A0;&#x6CB9;&#x7AD9;</h2>
+<pre><code class="lang-java">
+
+</code></pre>
 
                                 
                                 </section>
@@ -756,14 +816,10 @@
 
             
                 
-                <a href="../chapter2/section2.3.html" class="navigation navigation-prev " aria-label="Previous page: 链表总结一">
+                <a href="section8.3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: day35 860.柠檬水找零，406.根据身高重建队列，452. 用最少数量的箭引爆气球  ">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="section3.1.html" class="navigation navigation-next " aria-label="Next page: day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -772,7 +828,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"哈希表","level":"1.4","depth":1,"next":{"title":"day05 242.有效的字母异位词，349. 两个数组的交集， 202. 快乐数，1. 两数之和 ","level":"1.4.1","depth":2,"path":"chapter3/section3.1.md","ref":"chapter3/section3.1.md","articles":[]},"previous":{"title":"链表总结一","level":"1.3.3","depth":2,"path":"chapter2/section2.3.md","ref":"chapter2/section2.3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/README.md","mtime":"2022-10-20T01:12:33.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-15T15:26:52.376Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 ","level":"1.9.4","depth":2,"previous":{"title":"day35 860.柠檬水找零，406.根据身高重建队列，452. 用最少数量的箭引爆气球  ","level":"1.9.3","depth":2,"path":"chapter8/section8.3.md","ref":"chapter8/section8.3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/section8.4.md","mtime":"2022-11-15T15:26:29.185Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-15T15:26:52.376Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
