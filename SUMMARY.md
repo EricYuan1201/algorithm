@@ -42,4 +42,5 @@
     * [day32 122.买卖股票的最佳时机II，55. 跳跃游戏，45.跳跃游戏II ](chapter8/section8.2.md)
     * [day35 860.柠檬水找零，406.根据身高重建队列，452. 用最少数量的箭引爆气球  ](chapter8/section8.3.md)
     * [day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 ](chapter8/section8.4.md)
-    * [day35 435. 无重叠区间，763.划分字母区间，56. 合并区间 ](chapter8/section8.5.md)
+    * [day36 435. 无重叠区间，763.划分字母区间，56. 合并区间 ](chapter8/section8.5.md)
+    * [day37 738.单调递增的数字，简短的总结篇 ](chapter8/section8.5.md)

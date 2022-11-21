@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>day35 435. 无重叠区间，763.划分字母区间，56. 合并区间  · GitBook</title>
+        <title>day36 435. 无重叠区间，763.划分字母区间，56. 合并区间  · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -56,6 +56,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="section8.5.html" />
     
     
     <link rel="prev" href="section8.4.html" />
@@ -681,7 +683,20 @@
                 <a href="section8.5.html">
             
                     
-                    day35 435. 无重叠区间，763.划分字母区间，56. 合并区间 
+                    day36 435. 无重叠区间，763.划分字母区间，56. 合并区间 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.6" data-path="section8.5.html">
+            
+                <a href="section8.5.html">
+            
+                    
+                    day37 738.单调递增的数字，简短的总结篇 
             
                 </a>
             
@@ -724,7 +739,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >day35 435. 无重叠区间，763.划分字母区间，56. 合并区间 </a>
+        <a href=".." >day36 435. 无重叠区间，763.划分字母区间，56. 合并区间 </a>
     </h1>
 </div>
 
@@ -739,32 +754,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="5-435-&#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;&#xFF0C;763&#x5212;&#x5206;&#x5B57;&#x6BCD;&#x533A;&#x95F4;&#xFF0C;56-&#x5408;&#x5E76;&#x533A;&#x95F4;">5 435. &#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;&#xFF0C;763.&#x5212;&#x5206;&#x5B57;&#x6BCD;&#x533A;&#x95F4;&#xFF0C;56. &#x5408;&#x5E76;&#x533A;&#x95F4;</h1>
-<h2 id="5-435-&#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;">5 435. &#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;</h2>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">eraseOverlapIntervals</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] intervals)</span> </span>{
-      Arrays.sort(intervals, (o1, o2) -&gt; Integer.compare(o1[<span class="hljs-number">0</span>], o2[<span class="hljs-number">0</span>]));
-      <span class="hljs-keyword">int</span> preEnd = intervals[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];
-      <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;
-      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; intervals.length; i++) {
-         <span class="hljs-keyword">int</span> nowS = intervals[i][<span class="hljs-number">0</span>];
-         <span class="hljs-keyword">int</span> nowE = intervals[i][<span class="hljs-number">1</span>];
-         <span class="hljs-keyword">if</span> (nowS &gt;= preEnd) {
-            preEnd = nowE;
-         } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nowE &lt;= preEnd) {
-            res ++;
-            preEnd = nowE;
-         } <span class="hljs-keyword">else</span> {
-            res ++;
-         }
-      }
-      <span class="hljs-keyword">return</span> res;
-   }
-</code></pre>
-<h2 id="763&#x5212;&#x5206;&#x5B57;&#x6BCD;&#x533A;&#x95F4;">763.&#x5212;&#x5206;&#x5B57;&#x6BCD;&#x533A;&#x95F4;</h2>
+                                <h1 id="7-738&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x7B80;&#x77ED;&#x7684;&#x603B;&#x7ED3;&#x7BC7;">7 738.&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x7B80;&#x77ED;&#x7684;&#x603B;&#x7ED3;&#x7BC7;</h1>
+<h2 id="7-738&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x6570;&#x5B57;">7 738.&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x6570;&#x5B57;</h2>
 <pre><code class="lang-java">
 
 </code></pre>
-<h2 id="56-&#x5408;&#x5E76;&#x533A;&#x95F4;">56. &#x5408;&#x5E76;&#x533A;&#x95F4;</h2>
+<h2 id="&#x7B80;&#x77ED;&#x7684;&#x603B;&#x7ED3;&#x7BC7;">&#x7B80;&#x77ED;&#x7684;&#x603B;&#x7ED3;&#x7BC7;</h2>
 <pre><code class="lang-java">
 
 </code></pre>
@@ -795,10 +790,14 @@
 
             
                 
-                <a href="section8.4.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 ">
+                <a href="section8.4.html" class="navigation navigation-prev " aria-label="Previous page: day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 ">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="section8.5.html" class="navigation navigation-next " aria-label="Next page: day37 738.单调递增的数字，简短的总结篇 ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -807,7 +806,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day35 435. 无重叠区间，763.划分字母区间，56. 合并区间 ","level":"1.9.5","depth":2,"previous":{"title":"day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 ","level":"1.9.4","depth":2,"path":"chapter8/section8.4.md","ref":"chapter8/section8.4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/section8.5.md","mtime":"2022-11-16T15:20:35.122Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-16T15:20:40.913Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day36 435. 无重叠区间，763.划分字母区间，56. 合并区间 ","level":"1.9.5","depth":2,"next":{"title":"day37 738.单调递增的数字，简短的总结篇 ","level":"1.9.6","depth":2,"path":"chapter8/section8.5.md","ref":"chapter8/section8.5.md","articles":[]},"previous":{"title":"day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 ","level":"1.9.4","depth":2,"path":"chapter8/section8.4.md","ref":"chapter8/section8.4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/section8.5.md","mtime":"2022-11-21T14:32:54.344Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-21T14:32:59.250Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
