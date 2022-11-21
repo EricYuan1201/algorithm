@@ -44,3 +44,5 @@
     * [day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 ](chapter8/section8.4.md)
     * [day36 435. 无重叠区间，763.划分字母区间，56. 合并区间 ](chapter8/section8.5.md)
     * [day37 738.单调递增的数字，简短的总结篇 ](chapter8/section8.5.md)
+* [动态规划](chapter9/README.md)
+    * [day38 509. 斐波那契数， 70. 爬楼梯，746. 使用最小花费爬楼梯 ](chapter9/section9.1.md)
