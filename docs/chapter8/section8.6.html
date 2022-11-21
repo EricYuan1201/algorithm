@@ -814,12 +814,38 @@
                                 
                                 <h1 id="7-738&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x7B80;&#x77ED;&#x7684;&#x603B;&#x7ED3;&#x7BC7;">7 738.&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x7B80;&#x77ED;&#x7684;&#x603B;&#x7ED3;&#x7BC7;</h1>
 <h2 id="7-738&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x6570;&#x5B57;">7 738.&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x6570;&#x5B57;</h2>
-<pre><code class="lang-java">
-
+<p>&#x6284;&#x4E86;&#x4E00;&#x4E2A;&#x9898;&#x89E3;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">monotoneIncreasingDigits</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span></span>{
+         <span class="hljs-keyword">if</span> (n &lt; <span class="hljs-number">10</span>) <span class="hljs-keyword">return</span> n;
+         <span class="hljs-keyword">char</span>[] arr = String.valueOf(n).toCharArray();
+         <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+         <span class="hljs-keyword">for</span> (; i &lt; arr.length-<span class="hljs-number">1</span>; i++) {
+            <span class="hljs-keyword">if</span> (i &lt; arr.length-<span class="hljs-number">1</span> &amp;&amp; arr[i] &gt; arr[i+<span class="hljs-number">1</span>]) {
+               <span class="hljs-keyword">break</span>;
+            }
+         }
+         <span class="hljs-comment">//&#x627E;&#x5230;&#x4E86;&#x5F00;&#x59CB;&#x4E0B;&#x6C89;&#x7684;i&#xFF0C;&#x5C06;i-1 &#x51CF;&#x4E00;&#xFF0C;&#x540E;&#x9762;&#x5168;&#x90E8;&#x7F6E;&#x4E3A;9999</span>
+         <span class="hljs-keyword">if</span> (i == arr.length -<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> n;
+         <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
+         <span class="hljs-keyword">for</span> (; j &lt;= i ; j++) {
+            <span class="hljs-keyword">if</span> (arr[j] == arr[i]) {
+               <span class="hljs-keyword">break</span>;
+            }
+         }
+         arr[j] = (<span class="hljs-keyword">char</span>) (arr[j]-<span class="hljs-number">1</span>);
+         j ++;
+         <span class="hljs-keyword">for</span> (; j &lt; arr.length; j++) {
+            arr[j] = <span class="hljs-string">&apos;9&apos;</span>;
+         }
+         <span class="hljs-keyword">return</span> Integer.parseInt(String.valueOf(arr));
+      }
 </code></pre>
 <h2 id="&#x7B80;&#x77ED;&#x7684;&#x603B;&#x7ED3;&#x7BC7;">&#x7B80;&#x77ED;&#x7684;&#x603B;&#x7ED3;&#x7BC7;</h2>
-<pre><code class="lang-java">
-
+<pre><code class="lang-java"><span class="hljs-number">1</span>. &#x80A1;&#x7968;&#xFF1A;&#x5C31;&#x662F;&#x628A;&#x5168;&#x90E8;&#x7684;&#x5229;&#x76CA;&#x5403;&#x6389;
+<span class="hljs-number">2</span>. &#x5206;&#x53D1;&#x997C;&#x5E72;&#xFF0C;&#x76F4;&#x63A5;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x53CC;&#x904D;&#x5386;
+<span class="hljs-number">3</span>. k&#x6B21;&#x53D6;&#x53CD;&#xFF0C;&#x4F9D;&#x7136;&#x662F;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x8BB0;&#x5F55;&#x4E86;&#x53CD;&#x8F6C;&#x4E86;&#x51E0;&#x6B21;&#x3002;
+<span class="hljs-number">4</span>. &#x627E;&#x96F6;&#xFF0C;five, ten &#x4E24;&#x4E2A;&#x6307;&#x9488;
+<span class="hljs-number">5</span>. &#x5355;&#x8C03;&#x589E;&#x5E8F;&#x5217;&#xFF0C;&#x8BB0;&#x5F55;&#x5F00;&#x59CB;&#x9012;&#x51CF;&#x7684;&#x5750;&#x6807;&#xFF0C;&#x7136;&#x540E;-<span class="hljs-number">1</span>&#xFF0C;&#x540E;&#x9762;&#x5168;&#x90E8;&#x7F6E;&#x4E3A;<span class="hljs-number">9999</span>
 </code></pre>
 
                                 
@@ -864,7 +890,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day37 738.单调递增的数字，简短的总结篇 ","level":"1.9.6","depth":2,"next":{"title":"动态规划","level":"1.10","depth":1,"path":"chapter9/README.md","ref":"chapter9/README.md","articles":[{"title":"day38 509. 斐波那契数， 70. 爬楼梯，746. 使用最小花费爬楼梯 ","level":"1.10.1","depth":2,"path":"chapter9/section9.1.md","ref":"chapter9/section9.1.md","articles":[]},{"title":"day39 62.不同路径，63. 不同路径 II ","level":"1.10.2","depth":2,"path":"chapter9/section9.2.md","ref":"chapter9/section9.2.md","articles":[]},{"title":"day41 343. 整数拆分，96.不同的二叉搜索树  ","level":"1.10.3","depth":2,"path":"chapter9/section9.3.md","ref":"chapter9/section9.3.md","articles":[]}]},"previous":{"title":"day36 435. 无重叠区间，763.划分字母区间，56. 合并区间 ","level":"1.9.5","depth":2,"path":"chapter8/section8.5.md","ref":"chapter8/section8.5.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/section8.6.md","mtime":"2022-11-21T14:32:54.344Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-21T14:39:41.793Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day37 738.单调递增的数字，简短的总结篇 ","level":"1.9.6","depth":2,"next":{"title":"动态规划","level":"1.10","depth":1,"path":"chapter9/README.md","ref":"chapter9/README.md","articles":[{"title":"day38 509. 斐波那契数， 70. 爬楼梯，746. 使用最小花费爬楼梯 ","level":"1.10.1","depth":2,"path":"chapter9/section9.1.md","ref":"chapter9/section9.1.md","articles":[]},{"title":"day39 62.不同路径，63. 不同路径 II ","level":"1.10.2","depth":2,"path":"chapter9/section9.2.md","ref":"chapter9/section9.2.md","articles":[]},{"title":"day41 343. 整数拆分，96.不同的二叉搜索树  ","level":"1.10.3","depth":2,"path":"chapter9/section9.3.md","ref":"chapter9/section9.3.md","articles":[]}]},"previous":{"title":"day36 435. 无重叠区间，763.划分字母区间，56. 合并区间 ","level":"1.9.5","depth":2,"path":"chapter8/section8.5.md","ref":"chapter8/section8.5.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/section8.6.md","mtime":"2022-11-21T15:11:59.134Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-21T15:17:53.748Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

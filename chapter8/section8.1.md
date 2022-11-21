@@ -35,7 +35,27 @@ public int maxSubArray(int[] nums) {
 
 
 ```java
+class Solution {
+    public int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(g);
+        Arrays.sort(s);
+        int count = 0;//满足小孩的计数
 
+        //从数组最大值开始遍历
+        for(int i = g.length-1,j = s.length-1; i >= 0 && j >= 0;){
+            //饼干大于小孩胃口，即分配饼干，满足小孩+1，g和s数组同时下标-1
+            if(s[j] >= g[i]){
+                count++;
+                j--;
+                i--;
+            //饼干小于小孩胃口，胃口数组g下标-1
+            }else{
+                i--;
+            }
+        }
+        return count;
+    }
+}
 
 ```
 ##376. 摆动序列

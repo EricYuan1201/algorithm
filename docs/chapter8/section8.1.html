@@ -839,8 +839,27 @@
 }
 </code></pre>
 <h2 id="455&#x5206;&#x53D1;&#x997C;&#x5E72;">455.&#x5206;&#x53D1;&#x997C;&#x5E72;</h2>
-<pre><code class="lang-java">
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findContentChildren</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] g, <span class="hljs-keyword">int</span>[] s)</span> </span>{
+        Arrays.sort(g);
+        Arrays.sort(s);
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<span class="hljs-comment">//&#x6EE1;&#x8DB3;&#x5C0F;&#x5B69;&#x7684;&#x8BA1;&#x6570;</span>
 
+        <span class="hljs-comment">//&#x4ECE;&#x6570;&#x7EC4;&#x6700;&#x5927;&#x503C;&#x5F00;&#x59CB;&#x904D;&#x5386;</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = g.length-<span class="hljs-number">1</span>,j = s.length-<span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span> &amp;&amp; j &gt;= <span class="hljs-number">0</span>;){
+            <span class="hljs-comment">//&#x997C;&#x5E72;&#x5927;&#x4E8E;&#x5C0F;&#x5B69;&#x80C3;&#x53E3;&#xFF0C;&#x5373;&#x5206;&#x914D;&#x997C;&#x5E72;&#xFF0C;&#x6EE1;&#x8DB3;&#x5C0F;&#x5B69;+1&#xFF0C;g&#x548C;s&#x6570;&#x7EC4;&#x540C;&#x65F6;&#x4E0B;&#x6807;-1</span>
+            <span class="hljs-keyword">if</span>(s[j] &gt;= g[i]){
+                count++;
+                j--;
+                i--;
+            <span class="hljs-comment">//&#x997C;&#x5E72;&#x5C0F;&#x4E8E;&#x5C0F;&#x5B69;&#x80C3;&#x53E3;&#xFF0C;&#x80C3;&#x53E3;&#x6570;&#x7EC4;g&#x4E0B;&#x6807;-1</span>
+            }<span class="hljs-keyword">else</span>{
+                i--;
+            }
+        }
+        <span class="hljs-keyword">return</span> count;
+    }
+}
 </code></pre>
 <h2 id="376-&#x6446;&#x52A8;&#x5E8F;&#x5217;">376. &#x6446;&#x52A8;&#x5E8F;&#x5217;</h2>
 <pre><code class="lang-java">
@@ -889,7 +908,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day31 53. 最大子序和，455.分发饼干，376. 摆动序列 ","level":"1.9.1","depth":2,"next":{"title":"day32 122.买卖股票的最佳时机II，55. 跳跃游戏，45.跳跃游戏II ","level":"1.9.2","depth":2,"path":"chapter8/section8.2.md","ref":"chapter8/section8.2.md","articles":[]},"previous":{"title":"贪心算法","level":"1.9","depth":1,"path":"chapter8/README.md","ref":"chapter8/README.md","articles":[{"title":"day31 53. 最大子序和，455.分发饼干，376. 摆动序列 ","level":"1.9.1","depth":2,"path":"chapter8/section8.1.md","ref":"chapter8/section8.1.md","articles":[]},{"title":"day32 122.买卖股票的最佳时机II，55. 跳跃游戏，45.跳跃游戏II ","level":"1.9.2","depth":2,"path":"chapter8/section8.2.md","ref":"chapter8/section8.2.md","articles":[]},{"title":"day35 860.柠檬水找零，406.根据身高重建队列，452. 用最少数量的箭引爆气球  ","level":"1.9.3","depth":2,"path":"chapter8/section8.3.md","ref":"chapter8/section8.3.md","articles":[]},{"title":"day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 ","level":"1.9.4","depth":2,"path":"chapter8/section8.4.md","ref":"chapter8/section8.4.md","articles":[]},{"title":"day36 435. 无重叠区间，763.划分字母区间，56. 合并区间 ","level":"1.9.5","depth":2,"path":"chapter8/section8.5.md","ref":"chapter8/section8.5.md","articles":[]},{"title":"day37 738.单调递增的数字，简短的总结篇 ","level":"1.9.6","depth":2,"path":"chapter8/section8.6.md","ref":"chapter8/section8.6.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/section8.1.md","mtime":"2022-11-14T15:11:26.229Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-21T14:39:41.793Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day31 53. 最大子序和，455.分发饼干，376. 摆动序列 ","level":"1.9.1","depth":2,"next":{"title":"day32 122.买卖股票的最佳时机II，55. 跳跃游戏，45.跳跃游戏II ","level":"1.9.2","depth":2,"path":"chapter8/section8.2.md","ref":"chapter8/section8.2.md","articles":[]},"previous":{"title":"贪心算法","level":"1.9","depth":1,"path":"chapter8/README.md","ref":"chapter8/README.md","articles":[{"title":"day31 53. 最大子序和，455.分发饼干，376. 摆动序列 ","level":"1.9.1","depth":2,"path":"chapter8/section8.1.md","ref":"chapter8/section8.1.md","articles":[]},{"title":"day32 122.买卖股票的最佳时机II，55. 跳跃游戏，45.跳跃游戏II ","level":"1.9.2","depth":2,"path":"chapter8/section8.2.md","ref":"chapter8/section8.2.md","articles":[]},{"title":"day35 860.柠檬水找零，406.根据身高重建队列，452. 用最少数量的箭引爆气球  ","level":"1.9.3","depth":2,"path":"chapter8/section8.3.md","ref":"chapter8/section8.3.md","articles":[]},{"title":"day34 135. 分发糖果，1005.K次取反后最大化的数组和，134. 加油站 ","level":"1.9.4","depth":2,"path":"chapter8/section8.4.md","ref":"chapter8/section8.4.md","articles":[]},{"title":"day36 435. 无重叠区间，763.划分字母区间，56. 合并区间 ","level":"1.9.5","depth":2,"path":"chapter8/section8.5.md","ref":"chapter8/section8.5.md","articles":[]},{"title":"day37 738.单调递增的数字，简短的总结篇 ","level":"1.9.6","depth":2,"path":"chapter8/section8.6.md","ref":"chapter8/section8.6.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/section8.1.md","mtime":"2022-11-21T15:07:27.953Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-21T15:17:53.748Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
