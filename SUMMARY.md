@@ -48,3 +48,4 @@
     * [day38 509. 斐波那契数， 70. 爬楼梯，746. 使用最小花费爬楼梯 ](chapter9/section9.1.md)
     * [day39 62.不同路径，63. 不同路径 II ](chapter9/section9.2.md)
     * [day41 343. 整数拆分，96.不同的二叉搜索树  ](chapter9/section9.3.md)
+    * [day42 01背包问题，416. 分割等和子集 ](chapter9/section9.4.md)
