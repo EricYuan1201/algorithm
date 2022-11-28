@@ -905,16 +905,65 @@
                                 
                                 <h1 id="5-70-&#x722C;&#x697C;&#x68AF;&#xFF0C;322-&#x96F6;&#x94B1;&#x5151;&#x6362;&#xFF0C;279&#x5B8C;&#x5168;&#x5E73;&#x65B9;&#x6570;">5 70. &#x722C;&#x697C;&#x68AF;&#xFF0C;322. &#x96F6;&#x94B1;&#x5151;&#x6362;&#xFF0C;279.&#x5B8C;&#x5168;&#x5E73;&#x65B9;&#x6570;</h1>
 <h2 id="5-70-&#x722C;&#x697C;&#x68AF;">5 70. &#x722C;&#x697C;&#x68AF;</h2>
-<pre><code class="lang-java">
-
+<p>&#x5C31;&#x662F;&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;</p>
+<pre><code class="lang-java"> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">climbStairs</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n + <span class="hljs-number">1</span>];
+    dp[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
+    dp[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i++) {
+        dp[i] = dp[i - <span class="hljs-number">1</span>] + dp[i - <span class="hljs-number">2</span>];
+    }
+ <span class="hljs-keyword">return</span> dp[n];
 </code></pre>
 <h2 id="322-&#x96F6;&#x94B1;&#x5151;&#x6362;">322. &#x96F6;&#x94B1;&#x5151;&#x6362;</h2>
-<pre><code class="lang-java">
-
+<p>&#x603B;&#x611F;&#x89C9;&#x8FD9;&#x9053;&#x9898;&#x505A;&#x8FC7;...</p>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; coins &#xFF0C;&#x8868;&#x793A;&#x4E0D;&#x540C;&#x9762;&#x989D;&#x7684;&#x786C;&#x5E01;&#xFF1B;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x6574;&#x6570; amount &#xFF0C;&#x8868;&#x793A;&#x603B;&#x91D1;&#x989D;&#x3002;</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//&#x8BA1;&#x7B97;&#x5E76;&#x8FD4;&#x56DE;&#x53EF;&#x4EE5;&#x51D1;&#x6210;&#x603B;&#x91D1;&#x989D;&#x6240;&#x9700;&#x7684; &#x6700;&#x5C11;&#x7684;&#x786C;&#x5E01;&#x4E2A;&#x6570; &#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x4E00;&#x79CD;&#x786C;&#x5E01;&#x7EC4;&#x5408;&#x80FD;&#x7EC4;&#x6210;&#x603B;&#x91D1;&#x989D;&#xFF0C;&#x8FD4;&#x56DE; -1 &#x3002;</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//&#x4F60;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x6BCF;&#x79CD;&#x786C;&#x5E01;&#x7684;&#x6570;&#x91CF;&#x662F;&#x65E0;&#x9650;&#x7684;&#x3002;</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//&#x94FE;&#x63A5;&#xFF1A;https://leetcode.cn/problems/coin-change</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">coinChange</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] coins, <span class="hljs-keyword">int</span> amount)</span> </span>{
+    <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[amount + <span class="hljs-number">1</span>];
+    Arrays.fill(dp, amount + <span class="hljs-number">1</span>);
+    dp[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= amount; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> coin : coins) {
+            <span class="hljs-keyword">if</span> (coin &lt;= i) {
+                dp[i] = Math.min(dp[i], dp[i - coin] + <span class="hljs-number">1</span>);
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> dp[amount] &gt; amount ? -<span class="hljs-number">1</span> : dp[amount];
+}
 </code></pre>
 <h2 id="279&#x5B8C;&#x5168;&#x5E73;&#x65B9;&#x6570;">279.&#x5B8C;&#x5168;&#x5E73;&#x65B9;&#x6570;</h2>
-<pre><code class="lang-java">
-
+<p>&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF0C;for&#x5FAA;&#x73AF;&#xFF0C;&#x4E5F;&#x7B97;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x6A21;&#x677F; + &#x6570;&#x5B66;&#x601D;&#x7EF4;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570; n &#xFF0C;&#x8FD4;&#x56DE; &#x548C;&#x4E3A; n &#x7684;&#x5B8C;&#x5168;&#x5E73;&#x65B9;&#x6570;&#x7684;&#x6700;&#x5C11;&#x6570;&#x91CF; &#x3002;</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//&#x5B8C;&#x5168;&#x5E73;&#x65B9;&#x6570; &#x662F;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#xFF0C;&#x5176;&#x503C;&#x7B49;&#x4E8E;&#x53E6;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x7684;&#x5E73;&#x65B9;&#xFF1B;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5176;&#x503C;&#x7B49;&#x4E8E;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x81EA;&#x4E58;&#x7684;&#x79EF;&#x3002;&#x4F8B;&#x5982;&#xFF0C;1&#x3001;4&#x3001;9 &#x548C; 16 &#x90FD;&#x662F;&#x5B8C;&#x5168;&#x5E73;&#x65B9;&#x6570;&#xFF0C;&#x800C; 3 &#x548C; 11 &#x4E0D;&#x662F;&#x3002;</span>
+<span class="hljs-comment">//https://leetcode.cn/problems/perfect-squares/solution/wan-quan-ping-fang-shu-by-leetcode-solut-t99c/</span>
+<span class="hljs-comment">/**
+ * &#x6709;&#x65F6;&#x5019;&#x770B;&#x9898;&#x89E3;&#xFF0C;&#x5982;&#x6B64;&#x7CBE;&#x5999;&#x3002;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numSquares</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n + <span class="hljs-number">1</span>];
+    dp[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+    dp[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;
+    <span class="hljs-comment">//&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x6A21;&#x677F;&#x4EE3;&#x7801;&#x3002;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+        <span class="hljs-keyword">int</span> minn = Integer.MAX_VALUE;
+        <span class="hljs-comment">//&#x7B2C;2&#x6B65;&#xFF0C;&#x5229;&#x7528;&#x4E86;for&#x5FAA;&#x73AF;</span>
+        <span class="hljs-comment">//&#x6070;&#x597D;&#x7684;&#x5229;&#x7528;&#x4E86;&#x4E4B;&#x524D;&#x7684;&#x503C;&#x90FD;&#x8BA1;&#x7B97;&#x8FC7;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j * j &lt;= i; j++) {
+            minn = Math.min(minn, dp[i - j * j]);
+        }
+        dp[i] = minn + <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> dp[n];
+}
 </code></pre>
 
                                 
@@ -959,7 +1008,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day45 70. 爬楼梯，322. 零钱兑换，279.完全平方数 ","level":"1.10.7","depth":2,"next":{"title":"day46 139.单词拆分，背包问题总结篇！ ","level":"1.10.8","depth":2,"path":"chapter9/section9.8.md","ref":"chapter9/section9.8.md","articles":[]},"previous":{"title":"day44 完全背包，518. 零钱兑换 II，377. 组合总和 Ⅳ ","level":"1.10.6","depth":2,"path":"chapter9/section9.6.md","ref":"chapter9/section9.6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter9/section9.7.md","mtime":"2022-11-28T14:10:05.335Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-28T14:15:20.864Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day45 70. 爬楼梯，322. 零钱兑换，279.完全平方数 ","level":"1.10.7","depth":2,"next":{"title":"day46 139.单词拆分，背包问题总结篇！ ","level":"1.10.8","depth":2,"path":"chapter9/section9.8.md","ref":"chapter9/section9.8.md","articles":[]},"previous":{"title":"day44 完全背包，518. 零钱兑换 II，377. 组合总和 Ⅳ ","level":"1.10.6","depth":2,"path":"chapter9/section9.6.md","ref":"chapter9/section9.6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter9/section9.7.md","mtime":"2022-11-28T14:47:34.179Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-28T15:00:14.333Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
