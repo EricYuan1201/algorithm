@@ -55,3 +55,8 @@
     * [day46 139.单词拆分，背包问题总结篇！ ](chapter9/section9.8.md)
     * [day48 198.打家劫舍，213.打家劫舍II， 337.打家劫舍III ](chapter9/section9.9.md)
     * [day49 121. 买卖股票的最佳时机，122.买卖股票的最佳时机II  ](chapter9/section9.10.md)
+    * [day50 123.买卖股票的最佳时机III，188.买卖股票的最佳时机IV  ](chapter9/section9.11.md)
+    * [day51 309.最佳买卖股票时机含冷冻期，714.买卖股票的最佳时机含手续费 ](chapter9/section9.12.md)
+    * [day52 300.最长递增子序列，674. 最长连续递增序列，718. 最长重复子数组 ](chapter9/section9.13.md)
+    * [day53 1143.最长公共子序列，1035.不相交的线，53. 最大子序和 ](chapter9/section9.14.md)
+    * [day55 392.判断子序列，115.不同的子序列 ](chapter9/section9.15.md)
