@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="section9.11.html" />
+    
     
     <link rel="prev" href="section9.9.html" />
     
@@ -851,6 +853,71 @@
             
         </li>
     
+        <li class="chapter " data-level="1.10.11" data-path="section9.11.html">
+            
+                <a href="section9.11.html">
+            
+                    
+                    day50 123.买卖股票的最佳时机III，188.买卖股票的最佳时机IV  
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="section9.12.html">
+            
+                <a href="section9.12.html">
+            
+                    
+                    day51 309.最佳买卖股票时机含冷冻期，714.买卖股票的最佳时机含手续费 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="section9.13.html">
+            
+                <a href="section9.13.html">
+            
+                    
+                    day52 300.最长递增子序列，674. 最长连续递增序列，718. 最长重复子数组 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="section9.14.html">
+            
+                <a href="section9.14.html">
+            
+                    
+                    day53 1143.最长公共子序列，1035.不相交的线，53. 最大子序和 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="section9.15.html">
+            
+                <a href="section9.15.html">
+            
+                    
+                    day55 392.判断子序列，115.不同的子序列 
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -901,14 +968,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="9-121-&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;&#xFF0C;122&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;ii">9 121. &#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;&#xFF0C;122.&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;II</h1>
-<h2 id="9-121-&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;">9 121. &#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;</h2>
-<pre><code class="lang-java">
+                                <h1 id="49-121-&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;&#xFF0C;122&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;ii">49 121. &#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;&#xFF0C;122.&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;II</h1>
+<h2 id="121-&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;">121. &#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;</h2>
+<p><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/" target="_blank">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/</a>
+&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;
+<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/solution/si-wei-dao-tu-zheng-li-gu-piao-wen-ti-da-9jir/" target="_blank">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/solution/si-wei-dao-tu-zheng-li-gu-piao-wen-ti-da-9jir/</a></p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxProfit</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] prices)</span> </span>{
+    <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[prices.length];
+    dp[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> minprice=prices[<span class="hljs-number">0</span>];<span class="hljs-comment">//minprice&#x4EE3;&#x8868;&#x5386;&#x53F2;&#x6700;&#x4F4E;&#x4EF7;&#x683C;&#xFF0C;</span>
+    <span class="hljs-comment">// &#x6240;&#x4EE5;i&#x4ECE;1&#x5F00;&#x59CB;&#x5386;&#x53F2;&#x6700;&#x4F4E;&#x4EF7;&#x683C;&#x80AF;&#x5B9A;&#x662F;prices[0]</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; prices.length; i++) {
+        dp[i]=Math.max(dp[i-<span class="hljs-number">1</span>],prices[i]-minprice);
+        minprice=Math.min(minprice,prices[i]);
 
+    }
+    <span class="hljs-keyword">return</span> dp[prices.length-<span class="hljs-number">1</span>];
+}
 </code></pre>
 <h2 id="122&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;ii">122.&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;II</h2>
-<pre><code class="lang-java">
-
+<p><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/" target="_blank">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/</a></p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxProfit</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] prices)</span> </span>{
+    <span class="hljs-keyword">if</span> (prices.length == <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; prices.length; i++) {
+        <span class="hljs-keyword">if</span> (prices[i] - prices[i-<span class="hljs-number">1</span>] &gt; <span class="hljs-number">0</span>) {
+            sum += (prices[i] - prices[i-<span class="hljs-number">1</span>]);
+        }
+    }
+    <span class="hljs-keyword">return</span> sum;
+}
 </code></pre>
 
                                 
@@ -937,10 +1028,14 @@
 
             
                 
-                <a href="section9.9.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: day48 198.打家劫舍，213.打家劫舍II， 337.打家劫舍III ">
+                <a href="section9.9.html" class="navigation navigation-prev " aria-label="Previous page: day48 198.打家劫舍，213.打家劫舍II， 337.打家劫舍III ">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="section9.11.html" class="navigation navigation-next " aria-label="Next page: day50 123.买卖股票的最佳时机III，188.买卖股票的最佳时机IV  ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -949,7 +1044,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day49 121. 买卖股票的最佳时机，122.买卖股票的最佳时机II  ","level":"1.10.10","depth":2,"previous":{"title":"day48 198.打家劫舍，213.打家劫舍II， 337.打家劫舍III ","level":"1.10.9","depth":2,"path":"chapter9/section9.9.md","ref":"chapter9/section9.9.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter9/section9.10.md","mtime":"2022-11-28T14:13:23.854Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-28T15:00:14.333Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day49 121. 买卖股票的最佳时机，122.买卖股票的最佳时机II  ","level":"1.10.10","depth":2,"next":{"title":"day50 123.买卖股票的最佳时机III，188.买卖股票的最佳时机IV  ","level":"1.10.11","depth":2,"path":"chapter9/section9.11.md","ref":"chapter9/section9.11.md","articles":[]},"previous":{"title":"day48 198.打家劫舍，213.打家劫舍II， 337.打家劫舍III ","level":"1.10.9","depth":2,"path":"chapter9/section9.9.md","ref":"chapter9/section9.9.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter9/section9.10.md","mtime":"2022-12-05T02:56:17.026Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-05T03:51:42.348Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

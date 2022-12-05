@@ -853,6 +853,71 @@
             
         </li>
     
+        <li class="chapter " data-level="1.10.11" data-path="section9.11.html">
+            
+                <a href="section9.11.html">
+            
+                    
+                    day50 123.买卖股票的最佳时机III，188.买卖股票的最佳时机IV  
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="section9.12.html">
+            
+                <a href="section9.12.html">
+            
+                    
+                    day51 309.最佳买卖股票时机含冷冻期，714.买卖股票的最佳时机含手续费 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="section9.13.html">
+            
+                <a href="section9.13.html">
+            
+                    
+                    day52 300.最长递增子序列，674. 最长连续递增序列，718. 最长重复子数组 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="section9.14.html">
+            
+                <a href="section9.14.html">
+            
+                    
+                    day53 1143.最长公共子序列，1035.不相交的线，53. 最大子序和 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="section9.15.html">
+            
+                <a href="section9.15.html">
+            
+                    
+                    day55 392.判断子序列，115.不同的子序列 
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -905,8 +970,23 @@
                                 
                                 <h1 id="6-139&#x5355;&#x8BCD;&#x62C6;&#x5206;&#xFF0C;&#x80CC;&#x5305;&#x95EE;&#x9898;&#x603B;&#x7ED3;&#x7BC7;&#xFF01;">6 139.&#x5355;&#x8BCD;&#x62C6;&#x5206;&#xFF0C;&#x80CC;&#x5305;&#x95EE;&#x9898;&#x603B;&#x7ED3;&#x7BC7;&#xFF01;</h1>
 <h2 id="6-139&#x5355;&#x8BCD;&#x62C6;&#x5206;">6 139.&#x5355;&#x8BCD;&#x62C6;&#x5206;</h2>
+<p><a href="https://leetcode.cn/problems/word-break/solution/dan-ci-chai-fen-by-leetcode-solution/" target="_blank">https://leetcode.cn/problems/word-break/solution/dan-ci-chai-fen-by-leetcode-solution/</a></p>
+<p>&#x770B;&#x4E86;&#x4E00;&#x4E0B;&#x9898;&#x89E3;</p>
 <pre><code class="lang-java">
-
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">wordBreak</span><span class="hljs-params">(String s, List&lt;String&gt; wordDict)</span> </span>{
+    Set&lt;String&gt; wordDictSet = <span class="hljs-keyword">new</span> HashSet(wordDict);
+    <span class="hljs-keyword">boolean</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[s.length() + <span class="hljs-number">1</span>];
+    dp[<span class="hljs-number">0</span>] = <span class="hljs-keyword">true</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= s.length(); i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) {
+            <span class="hljs-keyword">if</span> (dp[j] &amp;&amp; wordDictSet.contains(s.substring(j, i))) {
+                dp[i] = <span class="hljs-keyword">true</span>;
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> dp[s.length()];
+}
 </code></pre>
 <h2 id="&#x80CC;&#x5305;&#x95EE;&#x9898;&#x603B;&#x7ED3;&#x7BC7;&#xFF01;">&#x80CC;&#x5305;&#x95EE;&#x9898;&#x603B;&#x7ED3;&#x7BC7;&#xFF01;</h2>
 <pre><code class="lang-java">
@@ -955,7 +1035,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day46 139.单词拆分，背包问题总结篇！ ","level":"1.10.8","depth":2,"next":{"title":"day48 198.打家劫舍，213.打家劫舍II， 337.打家劫舍III ","level":"1.10.9","depth":2,"path":"chapter9/section9.9.md","ref":"chapter9/section9.9.md","articles":[]},"previous":{"title":"day45 70. 爬楼梯，322. 零钱兑换，279.完全平方数 ","level":"1.10.7","depth":2,"path":"chapter9/section9.7.md","ref":"chapter9/section9.7.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter9/section9.8.md","mtime":"2022-11-28T14:10:50.120Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-28T15:00:14.333Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day46 139.单词拆分，背包问题总结篇！ ","level":"1.10.8","depth":2,"next":{"title":"day48 198.打家劫舍，213.打家劫舍II， 337.打家劫舍III ","level":"1.10.9","depth":2,"path":"chapter9/section9.9.md","ref":"chapter9/section9.9.md","articles":[]},"previous":{"title":"day45 70. 爬楼梯，322. 零钱兑换，279.完全平方数 ","level":"1.10.7","depth":2,"path":"chapter9/section9.7.md","ref":"chapter9/section9.7.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter9/section9.8.md","mtime":"2022-12-05T03:25:29.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-05T03:51:42.348Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

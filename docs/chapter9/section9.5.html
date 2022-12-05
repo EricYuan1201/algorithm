@@ -853,6 +853,71 @@
             
         </li>
     
+        <li class="chapter " data-level="1.10.11" data-path="section9.11.html">
+            
+                <a href="section9.11.html">
+            
+                    
+                    day50 123.买卖股票的最佳时机III，188.买卖股票的最佳时机IV  
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="section9.12.html">
+            
+                <a href="section9.12.html">
+            
+                    
+                    day51 309.最佳买卖股票时机含冷冻期，714.买卖股票的最佳时机含手续费 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="section9.13.html">
+            
+                <a href="section9.13.html">
+            
+                    
+                    day52 300.最长递增子序列，674. 最长连续递增序列，718. 最长重复子数组 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="section9.14.html">
+            
+                <a href="section9.14.html">
+            
+                    
+                    day53 1143.最长公共子序列，1035.不相交的线，53. 最大子序和 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="section9.15.html">
+            
+                <a href="section9.15.html">
+            
+                    
+                    day55 392.判断子序列，115.不同的子序列 
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -909,12 +974,78 @@
 
 </code></pre>
 <h2 id="494-&#x76EE;&#x6807;&#x548C;">494. &#x76EE;&#x6807;&#x548C;</h2>
-<pre><code class="lang-java">
+<p>&#x4E4B;&#x524D;&#x7ADF;&#x7136;&#x5199;&#x8FC7;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findTargetSumWays</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target)</span> </span>{
+    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">if</span> (Math.abs(nums[<span class="hljs-number">0</span>]) == Math.abs(target)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+    }
+    <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) {
+        sum += nums[i];
+    }
 
+<span class="hljs-comment">//        int[] dp = new int[nums.length];</span>
+<span class="hljs-comment">//        //dp[i]&#x7684;&#x542B;&#x4E49;&#x662F;&#xFF0C;&#x5F53;i&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x80FD;&#x591F;&#x7EC4;&#x6210;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x662F;&#x591A;&#x5C11;&#x3002;</span>
+<span class="hljs-comment">//        for (int i = 0; i &lt; nums.length; i++) {</span>
+<span class="hljs-comment">//            //&#x8FD9;&#x4E00;&#x4E2A;&#x9898;&#x76EE;&#x5BF9;&#x80CC;&#x5305;&#x7684;&#x7406;&#x89E3;&#x9700;&#x6C42;&#x975E;&#x5E38;&#x4E4B;&#x6DF1;&#xFF0C;&#x53CD;&#x6B63;&#x6211;&#x662F;&#x6CA1;&#x60F3;&#x51FA;&#x6765;&#x3002;</span>
+<span class="hljs-comment">//            //&#x4F46;&#x51E1;&#x6709;&#x4E00;&#x4E2A;&#x70B9;&#x7406;&#x89E3;&#x4E0D;&#x4E86;&#xFF0C;&#x5C31;&#x505A;&#x4E0D;&#x51FA;&#x6765;&#x8FD9;&#x9053;&#x9898;&#x76EE;</span>
+<span class="hljs-comment">//            int curMax = 0;</span>
+<span class="hljs-comment">//            for (int j = sum; j &gt; nums[i]; j--) {</span>
+<span class="hljs-comment">//                int pTarget = dp[j]</span>
+<span class="hljs-comment">//            }</span>
+<span class="hljs-comment">//        }</span>
+
+    <span class="hljs-comment">//&#x5C31;&#x662F;&#x6784;&#x5EFA;2&#x4E2A;&#x7EC4;&#xFF0C;left right&#xFF0C;&#x8BA9;left - right = target&#x3002;</span>
+    <span class="hljs-comment">//left + right = sum</span>
+    <span class="hljs-comment">//left = (sum + target) / 2</span>
+    <span class="hljs-comment">//&#x5982;&#x679C;  left % 2 == 1&#xFF0C;&#x5219;&#x65E0;&#x89E3;</span>
+    <span class="hljs-comment">//&#x4E8E;&#x662F;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x80CC;&#x5305;&#x95EE;&#x9898;&#x3002;&#x6784;&#x5EFA;j&#x7EC4;&#xFF0C;&#x4E00;&#x5171;&#x6709;&#x591A;&#x5C11;&#x79CD;&#x89E3;&#x6CD5;&#x3002;</span>
+    <span class="hljs-keyword">if</span> ((sum + target) % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> (target &gt; sum) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> bagSize = (sum + target) / <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[bagSize + <span class="hljs-number">1</span>];
+    dp[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = bagSize; j &gt;= nums[i]; j--) {
+            <span class="hljs-comment">//&#x8FD9;&#x4E00;&#x53E5;&#x7684;&#x6838;&#x5FC3;&#x4F9D;&#x7136;&#x662F;&#x7B2C;i&#x4E2A;&#x5143;&#x7D20;&#x9009;&#x4E0E;&#x4E0D;&#x9009;</span>
+            dp[j] += dp[j - nums[i]];
+        }
+    }
+    <span class="hljs-keyword">return</span> dp[bagSize];
+}
 </code></pre>
 <h2 id="474&#x4E00;&#x548C;&#x96F6;">474.&#x4E00;&#x548C;&#x96F6;</h2>
-<pre><code class="lang-java">
+<p><a href="https://leetcode.cn/problems/ones-and-zeroes/solution/dong-tai-gui-hua-zhuan-huan-wei-0-1-bei-bao-wen-ti/" target="_blank">https://leetcode.cn/problems/ones-and-zeroes/solution/dong-tai-gui-hua-zhuan-huan-wei-0-1-bei-bao-wen-ti/</a></p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
 
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findMaxForm</span><span class="hljs-params">(String[] strs, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-keyword">int</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[m + <span class="hljs-number">1</span>][n + <span class="hljs-number">1</span>];
+        dp[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (String s : strs) {
+            <span class="hljs-keyword">int</span>[] zeroAndOne = calcZeroAndOne(s);
+            <span class="hljs-keyword">int</span> zeros = zeroAndOne[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">int</span> ones = zeroAndOne[<span class="hljs-number">1</span>];
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = m; i &gt;= zeros; i--) {
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = n; j &gt;= ones; j--) {
+                    dp[i][j] = Math.max(dp[i][j], dp[i - zeros][j - ones] + <span class="hljs-number">1</span>);
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> dp[m][n];
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] calcZeroAndOne(String str) {
+        <span class="hljs-keyword">int</span>[] res = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> c : str.toCharArray()) {
+            res[c - <span class="hljs-string">&apos;0&apos;</span>]++;
+        }
+        <span class="hljs-keyword">return</span> res;
+    }
+}
 </code></pre>
 
                                 
@@ -959,7 +1090,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"day43 1049. 最后一块石头的重量 II，494. 目标和，474.一和零 ","level":"1.10.5","depth":2,"next":{"title":"day44 完全背包，518. 零钱兑换 II，377. 组合总和 Ⅳ ","level":"1.10.6","depth":2,"path":"chapter9/section9.6.md","ref":"chapter9/section9.6.md","articles":[]},"previous":{"title":"day42 01背包问题，416. 分割等和子集 ","level":"1.10.4","depth":2,"path":"chapter9/section9.4.md","ref":"chapter9/section9.4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter9/section9.5.md","mtime":"2022-11-28T14:08:04.532Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-28T15:00:14.333Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"day43 1049. 最后一块石头的重量 II，494. 目标和，474.一和零 ","level":"1.10.5","depth":2,"next":{"title":"day44 完全背包，518. 零钱兑换 II，377. 组合总和 Ⅳ ","level":"1.10.6","depth":2,"path":"chapter9/section9.6.md","ref":"chapter9/section9.6.md","articles":[]},"previous":{"title":"day42 01背包问题，416. 分割等和子集 ","level":"1.10.4","depth":2,"path":"chapter9/section9.4.md","ref":"chapter9/section9.4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter9/section9.5.md","mtime":"2022-12-05T03:28:47.364Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-05T03:51:42.348Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
