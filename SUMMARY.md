@@ -60,3 +60,10 @@
     * [day52 300.最长递增子序列，674. 最长连续递增序列，718. 最长重复子数组 ](chapter9/section9.13.md)
     * [day53 1143.最长公共子序列，1035.不相交的线，53. 最大子序和 ](chapter9/section9.14.md)
     * [day55 392.判断子序列，115.不同的子序列 ](chapter9/section9.15.md)
+    * [day56 583. 两个字符串的删除操作，72. 编辑距离 ](chapter9/section9.17.md)
+    * [day57 647. 回文子串，516.最长回文子序列 ](chapter9/section9.18.md)
+* [单调栈](chapter10/README.md)
+    * [day58 739. 每日温度，496.下一个更大元素 I ](chapter10/section10.1.md)
+    * [day59 503.下一个更大元素II，42. 接雨水 ](chapter10/section10.2.md)
+    * [day60 84.柱状图中最大的矩形 ](chapter10/section10.3.md)
+
